@@ -1,2 +1,2 @@
-# StellarisModCustomUi
-Custom UI mod for Stellaris by Paradox
+# Stellaris Mods
+Custom UI mods for Stellaris by Paradox
