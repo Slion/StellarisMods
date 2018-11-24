@@ -2,6 +2,9 @@ guiTypes = {
 
 	@build_info_x_pos = 120
 	@planet_view_height = 566
+	@planet_view_width = 563
+	@panel_position_x = 459
+	@panel_position_y = -26
 	@module_width = 540
 	@tile_info_panel_module_width = 344
 	@tile_info_module_width = 334
@@ -55,14 +58,27 @@ guiTypes = {
 
 	containerWindowType = {
 		name = "planet_view"
-		orientation = lower_left
-		size = { width=563 height=@planet_view_height }
-		origo = lower_left
+		orientation = center
+		size = { width=@planet_view_width height=@planet_view_height }
+		origo = center
+		moveable = yes
+		#SL: Needed for header notch
+		clipping = no
 
-		show_position = { x = 4 y = -32 }
-		hide_position = { x = -563 y = -32 }
-		animation_time = 200
-		animation_type = decelerated
+		#show_position = { x = 4 y = -32 }
+		#hide_position = { x = -563 y = -32 }
+		#animation_time = 200
+		#animation_type = decelerated
+
+		# SL: Background needed for moveable to work
+		background = {
+			name = "background"
+			# Just use a transparent bitmap
+			quadTextureSprite = "GFX_tiled_window_transparent"
+			# Position offset works but has no visible effect since we use transparent background anyway.
+			# Offset value was taken from planet_bg_top.
+			position = { x = 0 y = -8 }			
+		}
 
 		containerWindowType = {
 			name = "background_window"
@@ -80,6 +96,8 @@ guiTypes = {
 			spriteType = "GFX_planet_bg_top"
 			position = { x = 0 y = -8 }
 			orientation = upper_left
+			#SL: Breaks moveable unless alwaysTransparent is set
+			alwaysTransparent = yes
 		}
 
 		iconType = {
@@ -167,7 +185,7 @@ guiTypes = {
 			quadTextureSprite = "GFX_tiled_window_transparent"
 			position = { x= 0 y = @tab_height }
 			orientation = lower_left
-			size = { x = 563 y = 42 }
+			size = { x = @planet_view_width y = 42 }
 			oversound = no_sound
 		}
 
@@ -4157,12 +4175,14 @@ guiTypes = {
 		name = "planet_view_panel"
 		size = { width = 357 height = 600 }
 
-		origo = lower_left
-		orientation = lower_left
-		show_position = { x = 569 y = -84 }
-		hide_position = { x = -350 y = -86 }
-		animation_time = 200
-		animation_type = decelerated
+		moveable = yes
+		origo = center
+		orientation = center
+		position = { x = @panel_position_x y = @panel_position_y }
+		#show_position = { x = 569 y = -84 }
+		#hide_position = { x = -350 y = -86 }
+		#animation_time = 200
+		#animation_type = decelerated
 
 		background = {
 			name = "planet_view_spaceport_construction_panel_background"
@@ -4221,12 +4241,14 @@ guiTypes = {
 		name = "planet_view_module_build_pop_panel"
 		size = { width = 357 height = 600 }
 
-		origo = lower_left
-		orientation = lower_left
-		show_position = { x = 569 y = -84 }
-		hide_position = { x = -350 y = -86 }
-		animation_time = 200
-		animation_type = decelerated
+		moveable = yes
+		origo = center
+		orientation = center
+		position = { x = @panel_position_x y = @panel_position_y }
+		#show_position = { x = 569 y = -84 }
+		#hide_position = { x = -350 y = -86 }
+		#animation_time = 200
+		#animation_type = decelerated
 
 		background = {
 			name = "planet_view_spaceport_construction_panel_background"
@@ -4322,12 +4344,14 @@ guiTypes = {
 		name = "planet_view_terraform_panel"
 		size = { width = 357 height = 604 }
 
-		origo = lower_left
-		orientation = lower_left
-		show_position = { x = 569 y = -80 }
-		hide_position = { x = -350 y = -82 }
-		animation_time = 200
-		animation_type = decelerated
+		moveable = yes
+		origo = center
+		orientation = center
+		position = { x = @panel_position_x y = @panel_position_y }
+		#show_position = { x = 569 y = -80 }
+		#hide_position = { x = -350 y = -82 }
+		#animation_time = 200
+		#animation_type = decelerated
 
 		background = {
 			name = "planet_view_spaceport_construction_panel_background"
@@ -5059,7 +5083,7 @@ guiTypes = {
 			font = "malgun_goth_24"
 			text = "CREATE_VASSAL"
 			position = { x = 25 y = 5 }
-			maxWidth = 563
+			maxWidth = @planet_view_width
 			maxHeight = 20
 			fixedSize = yes
 			format = left
