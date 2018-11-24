@@ -8,11 +8,18 @@
 guiTypes = {
 	containerWindowType = {
 		name = "starbase_view"
-		orientation = lower_left
-		origo = lower_left
-		moveable = no
+		orientation = center
+		origo = center
+		moveable = yes
 		clipping = yes
 		
+		# SL: Background needed for moveable to work
+		background = {
+			name = "background"
+			# Just use a transparent bitmap
+			quadTextureSprite = "GFX_tiled_window_transparent"
+		}
+
 		if_resolution = {
 		max_height = 800		
 		size = { width = @view_w height = 611 }
@@ -23,10 +30,10 @@ guiTypes = {
 		size = { width = @view_w height = @view_h }		
 		}
 		
-		show_position = { x = 4 y = -35 }
-		hide_position = { x = -563 y = -32 }
-		animation_time = 200
-		animation_type = decelerated
+		#show_position = { x = 4 y = -35 }
+		#hide_position = { x = -563 y = -32 }
+		#animation_time = 200
+		#animation_type = decelerated
 		show_sound = "select_starbase"
 		
 	
@@ -36,6 +43,8 @@ guiTypes = {
 			spriteType = "GFX_planet_bg_top"
 			position = { x = 0 y = 0 }
 			orientation = upper_left
+			#SL: Breaks moveable unless alwaysTransparent is set
+			alwaysTransparent = yes
 		}
 
 
@@ -836,8 +845,8 @@ guiTypes = {
 
 	containerWindowType = {
 		name = "starbase_side_view"
-		
-		
+		moveable = yes
+				
 		if_resolution = {
 		max_height = 800	
 
