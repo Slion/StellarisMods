@@ -1,10 +1,9 @@
 guiTypes = {
 
+	#SL: Sadly variable declaration is not working within if_resolution blocks
 	@build_info_x_pos = 120
 	@planet_view_height = 566
 	@planet_view_width = 563
-	@panel_position_x = 459
-	@panel_position_y = -26
 	@module_width = 540
 	@tile_info_panel_module_width = 344
 	@tile_info_module_width = 334
@@ -57,27 +56,35 @@ guiTypes = {
 
 
 	containerWindowType = {
-		name = "planet_view"
-		orientation = center
+		name = "planet_view"		
 		size = { width=@planet_view_width height=@planet_view_height }
-		origo = center
 		moveable = yes
 		#SL: Needed for header notch
 		clipping = no
 
-		#show_position = { x = 4 y = -32 }
-		#hide_position = { x = -563 y = -32 }
-		#animation_time = 200
-		#animation_type = decelerated
+		# Default mode
+		if_resolution = {
+			max_width = 3839
+			orientation = center
+			origo = center
+		}
+
+		# Widescreen mode
+		if_resolution = {
+			min_width = 3839
+			max_height = 1601
+			position = { x = 743 y = 149 }
+			orientation = upper_left
+			origo = upper_left
+		}
 
 		# SL: Background needed for moveable to work
 		background = {
 			name = "background"
-			# Just use a transparent bitmap
-			quadTextureSprite = "GFX_tiled_window_transparent"
+			quadTextureSprite = "GFX_invisible"
 			# Position offset works but has no visible effect since we use transparent background anyway.
 			# Offset value was taken from planet_bg_top.
-			position = { x = 0 y = -8 }			
+			# position = { x = 0 y = -8 }			
 		}
 
 		containerWindowType = {
@@ -4174,15 +4181,24 @@ guiTypes = {
 	containerWindowType = {
 		name = "planet_view_panel"
 		size = { width = 357 height = 600 }
-
 		moveable = yes
-		origo = center
-		orientation = center
-		position = { x = @panel_position_x y = @panel_position_y }
-		#show_position = { x = 569 y = -84 }
-		#hide_position = { x = -350 y = -86 }
-		#animation_time = 200
-		#animation_type = decelerated
+				
+		# Default mode
+		if_resolution = {
+			max_width = 3839
+			orientation = center
+			origo = center
+			position = { x = 459 y = -26 }
+		}
+
+		# Widescreen mode
+		if_resolution = {
+			min_width = 3839
+			max_height = 1601			
+			orientation = upper_left
+			origo = upper_left
+			position = { x = 1308 y = 151 }
+		}
 
 		background = {
 			name = "planet_view_spaceport_construction_panel_background"
@@ -4240,15 +4256,25 @@ guiTypes = {
 	containerWindowType = {
 		name = "planet_view_module_build_pop_panel"
 		size = { width = 357 height = 600 }
-
 		moveable = yes
-		origo = center
-		orientation = center
 		position = { x = @panel_position_x y = @panel_position_y }
-		#show_position = { x = 569 y = -84 }
-		#hide_position = { x = -350 y = -86 }
-		#animation_time = 200
-		#animation_type = decelerated
+
+		# Default mode
+		if_resolution = {
+			max_width = 3839
+			orientation = center
+			origo = center
+			position = { x = 459 y = -26 }
+		}
+
+		# Widescreen mode
+		if_resolution = {
+			min_width = 3839
+			max_height = 1601			
+			orientation = upper_left
+			origo = upper_left
+			position = { x = 1308 y = 151 }
+		}
 
 		background = {
 			name = "planet_view_spaceport_construction_panel_background"
@@ -4343,15 +4369,25 @@ guiTypes = {
 	containerWindowType = {
 		name = "planet_view_terraform_panel"
 		size = { width = 357 height = 604 }
-
 		moveable = yes
-		origo = center
-		orientation = center
 		position = { x = @panel_position_x y = @panel_position_y }
-		#show_position = { x = 569 y = -80 }
-		#hide_position = { x = -350 y = -82 }
-		#animation_time = 200
-		#animation_type = decelerated
+
+		# Default mode
+		if_resolution = {
+			max_width = 3839
+			orientation = center
+			origo = center
+			position = { x = 459 y = -26 }
+		}
+
+		# Widescreen mode
+		if_resolution = {
+			min_width = 3839
+			max_height = 1601			
+			orientation = upper_left
+			origo = upper_left
+			position = { x = 1308 y = 151 }
+		}
 
 		background = {
 			name = "planet_view_spaceport_construction_panel_background"

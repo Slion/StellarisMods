@@ -21,16 +21,25 @@ guiTypes = {
 	}
 	containerWindowType = {
 		name = "ship_designer"
-		#position = { x = -1280 y = 40 }
-		#show_position = { x = 4 y = 40 }
-		#hide_position = { x = -1280 y = 40 }
-		#animation_time = 200
-		#animation_type = decelerated
 		size = { width = 1272 height = 678 }
-		Orientation = center
-		origo = center
 		moveable = yes
 		show_sound = "interface"
+		
+		# Default mode
+		if_resolution = {
+			max_width = 3839
+			orientation = center
+			origo = center
+		}
+
+		# Widescreen mode
+		if_resolution = {
+			min_width = 3839
+			max_height = 1601
+			position = { x = 743 y = 141 }
+			orientation = upper_left
+			origo = upper_left
+		}
 
 		background = {
 			name = "background"

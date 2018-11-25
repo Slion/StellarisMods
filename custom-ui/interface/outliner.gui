@@ -48,7 +48,7 @@ guiTypes = {
 			spriteType = "GFX_black_bg_boxes"
 		}
 
-		instantTextBoxType={
+		instantTextBoxType = {
 			name = "text"
 			font = "cg_16b"
 			maxWidth = 190
@@ -60,14 +60,22 @@ guiTypes = {
 	containerWindowType = {
 		name = "outliner_window"
 		size = { width = 260 height = 20 }
-		position = { x = -260 y = 145 }
-		#position = { x = 20 y = 145 } 
-		#show_position = { x = -260 y = 145 }
-		#hide_position = { x = 20 y = 145 }
-		#animation_time = 200
-		#animation_type = decelerated
-		orientation = upper_right
 		moveable = yes
+
+		# Default mode
+		if_resolution = {
+			max_width = 3839
+			position = { x = -260 y = 145 }
+			orientation = upper_right
+		}
+
+		# Widescreen mode
+		if_resolution = {
+			min_width = 3839
+			max_height = 1601
+			position = { x = 480 y = 132 }
+			orientation = upper_left
+		}
 
 		background = {
 			name = "background"

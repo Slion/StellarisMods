@@ -29,7 +29,7 @@ guiTypes = {
 			position = { x = 200 y = 30 }	
 		}
 
-		# Widescreen 3840 mode
+		# Widescreen mode
 		if_resolution = {
 			min_width = 3839
 			# Should prevent it from taking effect in 4K 
