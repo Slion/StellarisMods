@@ -8,16 +8,29 @@
 guiTypes = {
 	containerWindowType = {
 		name = "starbase_view"
-		orientation = center
-		origo = center
 		moveable = yes
 		clipping = yes
 		
+		# Default mode
+		if_resolution = {
+			max_width = 3839
+			orientation = center
+			origo = center
+		}
+
+		# Widescreen mode
+		if_resolution = {
+			min_width = 3839
+			max_height = 1601
+			position = { x = 743 y = 141 }
+			orientation = upper_left
+			origo = upper_left
+		}
+
 		# SL: Background needed for moveable to work
 		background = {
-			name = "background"
-			# Just use a transparent bitmap
-			quadTextureSprite = "GFX_tiled_window_transparent"
+			name = "background_drag_handle"
+			quadTextureSprite = "GFX_invisible"
 		}
 
 		if_resolution = {
@@ -30,10 +43,6 @@ guiTypes = {
 		size = { width = @view_w height = @view_h }		
 		}
 		
-		#show_position = { x = 4 y = -35 }
-		#hide_position = { x = -563 y = -32 }
-		#animation_time = 200
-		#animation_type = decelerated
 		show_sound = "select_starbase"
 		
 	

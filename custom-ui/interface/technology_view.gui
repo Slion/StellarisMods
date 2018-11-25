@@ -2,18 +2,24 @@ guiTypes = {
 	containerWindowType = {
 		name = "technology_view_window"
 		size = { width=595 height=682 } 
-		
-		#show_position = { x = -1 y = 35 }
-        #hide_position = { x = -1070 y = 35 }
-        #animation_time = 200
-        #animation_type = decelerated
-		#fade_time = 750
-        #fade_type = smoothstep
-		
-		orientation = center
-		origo = center
 		moveable = yes
 		clipping = no
+		
+		# Default mode
+		if_resolution = {
+			max_width = 3839
+			orientation = center
+			origo = center
+		}
+
+		# Widescreen mode
+		if_resolution = {
+			min_width = 3839
+			max_height = 1601
+			position = { x = 738 y = 136 }
+			orientation = upper_left
+			origo = upper_left
+		}
 
 		background = {
 			name = "background"
