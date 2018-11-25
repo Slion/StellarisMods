@@ -3,14 +3,21 @@ guiTypes = {
 	containerWindowType = {
 		name = "situation_log"
 		size = { width = 900 height = 685 }
-		moveable = no
-		orientation = upper_left
+		moveable = yes
+		orientation = center
+		origo = center
 		
-		position = { x=5 y=40 }
-		show_position = { x = 4 y = 40 }
-        hide_position = { x = -808 y = 40 }
-        animation_time = 200
-        animation_type = decelerated
+		# position = { x=5 y=40 }
+		# show_position = { x = 4 y = 40 }
+        # hide_position = { x = -808 y = 40 }
+        # animation_time = 200
+        # animation_type = decelerated
+
+		background = {
+			name = "background"
+			spriteType = "GFX_invisible"
+		}
+
 	
 		containerWindowType = {
 			name = "galaxy_view_background_box"
@@ -20,6 +27,7 @@ guiTypes = {
 			background = {
 				name = "galaxy_view_background"
 				spriteType = "GFX_tile_large_bg"
+				alwaysTransparent = yes
 			}
 		}
 		

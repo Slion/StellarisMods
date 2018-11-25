@@ -1,13 +1,20 @@
 guiTypes = {
 	containerWindowType = {
 		name = "galaxy_view"
-		show_position = { x = 4 y = 40 }
-		hide_position = { x = -1272 y = 40 }
-		animation_time = 200
-		animation_type = decelerated
+		#show_position = { x = 4 y = 40 }
+		#hide_position = { x = -1272 y = 40 }
+		#animation_time = 200
+		#animation_type = decelerated
 
-		size = { width= 1042 height= 637 }
-		moveable = no
+		size = { width = 1272 height = 640 }
+		moveable = yes
+		orientation = center
+		origo = center
+
+		background = {
+			name = "background"
+			spriteType = "GFX_invisible"
+		}
 
 		containerWindowType = {
 			name = "galaxy_view_background_box"
@@ -17,6 +24,7 @@ guiTypes = {
 			background = {
 				name = "galaxy_view_background"
 				spriteType = "GFX_tile_large_bg"
+				alwaysTransparent = yes
 			}
 		}
 

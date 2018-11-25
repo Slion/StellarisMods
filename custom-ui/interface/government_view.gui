@@ -1,20 +1,28 @@
 guiTypes = {
 	containerWindowType = {
 		name = "government_view"
-		position = { x=5 y=5 }
+		#position = { x=5 y=5 }
 		size = { width = 563 height = 685 }
-		moveable = no
-		orientation = upper_left
+		moveable = yes
+		orientation = center
+		origo = center
 
-		show_position = { x = -1 y = 34 }
-        hide_position = { x = -570 y = 34 }
-        animation_time = 200
-        animation_type = decelerated
+		#show_position = { x = -1 y = 34 }
+        #hide_position = { x = -570 y = 34 }
+        #animation_time = 200
+        #animation_type = decelerated
+
+		
+		background = {
+			name = "background"
+			spriteType = "GFX_invisible"
+		}
 
 		iconType = {
 			name = "main_screen_bg"
 			spriteType = "GFX_main_screen_bg_short"
 			position = { x = 5 y = 6 }
+			alwaysTransparent = yes
 		}
 
 		iconType = {

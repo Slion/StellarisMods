@@ -3,14 +3,15 @@ guiTypes = {
 		name = "topbar_leaders_view"
 		size = { width=1272 height=640 } 
 		
-		position = { x = -1270 y = 40 }
-		show_position = { x = 4 y = 40 }
-        hide_position = { x = -1270 y = 40 }
-        animation_time = 200
-        animation_type = decelerated
+		#position = { x = -1270 y = 40 }
+		#show_position = { x = 4 y = 40 }
+        #hide_position = { x = -1270 y = 40 }
+        #animation_time = 200
+        #animation_type = decelerated
 		
-		orientation = upper_left
-		moveable = no
+		orientation = center
+		origo = center
+		moveable = yes
 		clipping = no
 		show_sound = "interface"
 		

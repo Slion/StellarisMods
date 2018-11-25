@@ -3,17 +3,22 @@ guiTypes = {
 		name = "technology_view_window"
 		size = { width=595 height=682 } 
 		
-		show_position = { x = -1 y = 35 }
-        hide_position = { x = -1070 y = 35 }
-        animation_time = 200
-        animation_type = decelerated
-	#	fade_time = 750
-    #   fade_type = smoothstep
+		#show_position = { x = -1 y = 35 }
+        #hide_position = { x = -1070 y = 35 }
+        #animation_time = 200
+        #animation_type = decelerated
+		#fade_time = 750
+        #fade_type = smoothstep
 		
-		orientation = upper_left
-		moveable = no
+		orientation = center
+		origo = center
+		moveable = yes
 		clipping = no
-		
+
+		background = {
+			name = "background"
+			spriteType = "GFX_invisible"
+		}
 
 	#	iconType = {
 	#		name = "main_screen_bg"
@@ -29,7 +34,7 @@ guiTypes = {
 			background = {
 				name = "black"
 				spriteType = "GFX_tile_outliner_bg"
-				#alwaysTransparent = yes
+				alwaysTransparent = yes
 			}
 		}
 		
