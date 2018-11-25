@@ -4197,7 +4197,7 @@ guiTypes = {
 			max_height = 1601			
 			orientation = upper_left
 			origo = upper_left
-			position = { x = 1308 y = 151 }
+			position = { x = 1308 y = 150 }
 		}
 
 		background = {
@@ -4273,7 +4273,7 @@ guiTypes = {
 			max_height = 1601			
 			orientation = upper_left
 			origo = upper_left
-			position = { x = 1308 y = 151 }
+			position = { x = 1308 y = 150 }
 		}
 
 		background = {
@@ -4386,7 +4386,7 @@ guiTypes = {
 			max_height = 1601			
 			orientation = upper_left
 			origo = upper_left
-			position = { x = 1308 y = 151 }
+			position = { x = 1308 y = 150 }
 		}
 
 		background = {
