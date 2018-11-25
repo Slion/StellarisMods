@@ -5,7 +5,7 @@ Custom UI mods for Stellaris by Paradox
 Make most views centered by default and moveable.
 Even the Outliner is moveable so you can put it on the left side.
 
-![Outliner on the left](custom-ui.jpg "Preview"){:class="width=25%"}
+![Outliner on the left](custom-ui/custom-ui.jpg "Outliner on the left")
 
 The intention is to keep this mod working fine for any screen resolutions. However it was developed on a widescreen 3840 by 1600 pixels. The main goal is to improve overall comfort and usability especially on widescreen where you constantly have to turn your head left and right from the Outliner to the Planet View for instance.
 With this mode you can conveniently position your Outliner on the left between the Fleet View and most other Views opening in the center.
