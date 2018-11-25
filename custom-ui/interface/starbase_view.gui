@@ -159,7 +159,7 @@ guiTypes = {
 			name = "starbase_rename_button"
 			quadTextureSprite = "gfx_transparency_button"
 			position = { x = 5 y = 2 }
-			size = { x = 278 y = 30 }
+			size = { x = 139 y = 30 }
 		}
 
 		containerWindowType = {
