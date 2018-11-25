@@ -5,13 +5,10 @@ guiTypes = {
 		name = "claims_view"
 
 		size = { width = @claims_view_width height = 600 } 
-		#hide_position = { x = -360 y = 115 } # Changed in code to center the window vertically
-		#show_position = { x = 10 y = 115 } # Changed in code to center the window vertically
-		#animation_type = decelerated
-		#animation_time = 500.5
-		# SL: It does not make sense to center that window as you need to select system on the map
-		#origo = center
-		#orientation = center
+		hide_position = { x = -360 y = 115 } # Changed in code to center the window vertically
+		show_position = { x = 10 y = 115 } # Changed in code to center the window vertically
+		animation_type = decelerated
+		animation_time = 500.5
 		moveable = yes
 
 		background = {
