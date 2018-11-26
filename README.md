@@ -28,8 +28,9 @@ Make most views centered by default.
 ![Outliner on the left](custom-ui/custom-ui.jpg "Outliner on the left")
 
 ### Compatibility
-Stellaris v2.1.*
-Based on Stellaris v2.1.3
+Stellaris v2.1.*.
+
+Based on Stellaris v2.1.3.
 
 ### Known issues
 I probably left out some views as this is still an early version needing more testing.
