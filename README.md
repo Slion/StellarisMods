@@ -40,3 +40,10 @@ Please feel free to report issues on GitHub.
 
 ### Further development
 Possibly improve default layout for other widescreen resolution much like it was done for 3840x1600.
+
+### Developer tips
+* To visualize UI elements in Stellaris use the debug console command `guibounds`.
+* `if_resolution` blocks were used for resolution specific modifications.
+* For `containerWindowType.moveable` to work `containerWindowType.background` must be present and reachable by pointer events.
+* To fix issues where the moveable background is not reachable use `alwaysTransparent = yes` in the covering element block.
+* Animations were not usable for moveable windows.
