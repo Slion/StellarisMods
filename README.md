@@ -3,29 +3,39 @@ Custom UI mods for Stellaris by Paradox
 
 ## Custom UI
 
-### Features
-Make most views centered by default and moveable.
-Even the Outliner is moveable so you can put it on the left side.
-Special widescreen (3840 x 1600) layoiut putting Outliner on the left and most windows opening on the right of it.  
+### Introduction
+Our Custom UI mod was developed with widescreen user experience in mind on a resolution of 3840 by 1600 pixels. It probably does not make sense for Full HD resolution and below. However the intention is to keep it working fine for any screen resolutions. Hopefully it brings some benefits to most widescreen users out there.
 
-### Screenshoots
+### Mission
+Improve overall comfort and usability especially on widescreen where you otherwise constantly have to turn your head right and left from the Outliner to the Planet View and back again.
+
+### Features
+This mod offers one feature common to all resolutions: most windows are now moveable.
+Even the Outliner is moveable. The Fleet View being a notable exception as it is effectively hardcoded to the bottom left corner. 
+
+#### 3840 x 1600 resolution
+Special widescreen layout putting Outliner on the left and most windows opening on the right of it.  
+The top bar is also reduced to 1920 pixels and centred to make it more accessible.
 ![Widescreen Planet View](widescreen-planet-view.png "Widescreen Planet View")
 
 ![Widescreen Situation Log](widescreen-situation-log.png "Widescreen Situation Log")
 
+#### Other resolutions
+Make most views centered by default.
+
+### Screenshoots
+
 ![Outliner on the left](custom-ui/custom-ui.jpg "Outliner on the left")
 
-
-### Description
-The intention is to keep this mod working fine for any screen resolutions. However it was developed on a widescreen 3840 by 1600 pixels. The main goal is to improve overall comfort and usability especially on widescreen where you constantly have to turn your head left and right from the Outliner to the Planet View for instance.
-With this mode you can conveniently position your Outliner on the left between the Fleet View and most other Views opening in the center.
-
-I probably left out some views as this is still an early version.
-Please feel free to report issues on GitHub.
-
-Based on:
-Stellaris v2.1.3
+### Compatibility
+Stellaris v2.1.*
+Based on Stellaris v2.1.3
 
 ### Known issues
+I probably left out some views as this is still an early version needing more testing.
+Please feel free to report issues on GitHub.
 * Fleet View was left in the bottom left corner and is not moveable as hardcoded behavior is breaking it positioning.
 * Planet View side panels not automatically following main window.
+
+### Further development
+Possibly improve default layout for other widescreen resolution much like it was done for 3840x1600.
