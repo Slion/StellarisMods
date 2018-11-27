@@ -4182,13 +4182,17 @@ guiTypes = {
 		name = "planet_view_panel"
 		size = { width = 357 height = 600 }
 		moveable = yes
-				
+		#SL: need to leave animation here for now
+		# See: https://github.com/Slion/StellarisMods/issues/2
+		animation_time = 0
+		animation_type = decelerated	
+		
 		# Default mode
-		if_resolution = {
+		if_resolution = {			
 			max_width = 3839
 			orientation = center
 			origo = center
-			position = { x = 459 y = -26 }
+			position = { x = 459 y = -26 }			
 		}
 
 		# Widescreen mode

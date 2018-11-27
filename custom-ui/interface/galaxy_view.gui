@@ -37,8 +37,6 @@ guiTypes = {
 			}
 		}
 
-
-
 		iconType = {
 			name = "hex_bg"
 			spriteType = "GFX_hex_bg"
@@ -63,7 +61,7 @@ guiTypes = {
 		buttonType = {
 			name = "close"
 			quadTextureSprite = "GFX_close_button_galaxy"
-			position = { x= 185 y = 16  }
+			position = { x= -45 y = 16  }
 			Orientation = "UPPER_RIGHT"
 			shortcut = "ESCAPE"
 			pdx_tooltip = "CLOSE_TITLE"
