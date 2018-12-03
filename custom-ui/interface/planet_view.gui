@@ -64,14 +64,14 @@ guiTypes = {
 
 		# Default mode
 		if_resolution = {
-			max_width = 3839
+			max_width = 3439
 			orientation = center
 			origo = center
 		}
 
 		# Widescreen mode
 		if_resolution = {
-			min_width = 3839
+			min_width = 3440
 			max_height = 1601
 			position = { x = 743 y = 149 }
 			orientation = upper_left
@@ -4189,7 +4189,7 @@ guiTypes = {
 		
 		# Default mode
 		if_resolution = {			
-			max_width = 3839
+			max_width = 3439
 			orientation = center
 			origo = center
 			position = { x = 459 y = -26 }			
@@ -4197,7 +4197,7 @@ guiTypes = {
 
 		# Widescreen mode
 		if_resolution = {
-			min_width = 3839
+			min_width = 3440
 			max_height = 1601			
 			orientation = upper_left
 			origo = upper_left
@@ -4265,7 +4265,7 @@ guiTypes = {
 
 		# Default mode
 		if_resolution = {
-			max_width = 3839
+			max_width = 3439
 			orientation = center
 			origo = center
 			position = { x = 459 y = -26 }
@@ -4273,7 +4273,7 @@ guiTypes = {
 
 		# Widescreen mode
 		if_resolution = {
-			min_width = 3839
+			min_width = 3440
 			max_height = 1601			
 			orientation = upper_left
 			origo = upper_left
@@ -4378,7 +4378,7 @@ guiTypes = {
 
 		# Default mode
 		if_resolution = {
-			max_width = 3839
+			max_width = 3439
 			orientation = center
 			origo = center
 			position = { x = 459 y = -26 }
@@ -4386,7 +4386,7 @@ guiTypes = {
 
 		# Widescreen mode
 		if_resolution = {
-			min_width = 3839
+			min_width = 3440
 			max_height = 1601			
 			orientation = upper_left
 			origo = upper_left

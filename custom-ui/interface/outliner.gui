@@ -64,14 +64,14 @@ guiTypes = {
 
 		# Default mode
 		if_resolution = {
-			max_width = 3839
+			max_width = 3439
 			position = { x = -260 y = 145 }
 			orientation = upper_right
 		}
 
 		# Widescreen mode
 		if_resolution = {
-			min_width = 3839
+			min_width = 3440
 			max_height = 1601
 			position = { x = 480 y = 132 }
 			orientation = upper_left
