@@ -1,4 +1,4 @@
-name="Custom UI"
+name="Custom UI (2.1)"
 path="mod/custom-ui"
 tags={
 	"Utilities"
