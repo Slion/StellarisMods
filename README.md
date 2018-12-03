@@ -6,6 +6,9 @@ Custom UI mods for Stellaris by Paradox
 ### Introduction
 Our Custom UI mod was developed with widescreen user experience in mind on a resolution of 3840 by 1600 pixels. It probably does not make sense for Full HD resolution and below. However the intention is to keep it working fine for any screen resolutions. Hopefully it brings some benefits to most widescreen users out there.
 
+### Installation
+For Stellaris v2.1 [subscribe here.](https://steamcommunity.com/sharedfiles/filedetails/?id=1574120097)
+
 ### Mission
 Improve overall comfort and usability especially on widescreen where you otherwise constantly have to turn your head right and left from the Outliner to the Planet View and back again.
 
@@ -13,8 +16,9 @@ Improve overall comfort and usability especially on widescreen where you otherwi
 This mod offers one feature common to all resolutions: most windows are now moveable.
 Even the Outliner is moveable. The Fleet View being a notable exception as it is effectively hardcoded to the bottom left corner. 
 
-#### 3840 x 1600 resolution
-Special widescreen layout putting Outliner on the left and most windows opening on the right of it.  
+#### Widescreen layout
+Special widescreen layout is used for any screen wider than 3440 pixels including 4K screens.
+Widescreen layout is putting Outliner on the left and most windows opening on the right of it.  
 The top bar is also reduced to 1920 pixels and centred to make it more accessible.
 ![Widescreen Planet View](widescreen-planet-view.png "Widescreen Planet View")
 
