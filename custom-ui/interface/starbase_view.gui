@@ -21,7 +21,7 @@ guiTypes = {
 		# Widescreen mode
 		if_resolution = {
 			min_width = 3440
-			max_height = 1601
+			
 			position = { x = 743 y = 141 }
 			orientation = upper_left
 			origo = upper_left

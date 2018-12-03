@@ -25,8 +25,8 @@ guiTypes = {
 		# Widescreen mode
 		if_resolution = {
 			min_width = 3440
-			# Should prevent it from taking effect in 4K 
-			max_height = 1601
+			 
+			
 			size = { width=50% height=100% }
 			position = { x=960 y=0 }
 		}
@@ -74,8 +74,8 @@ guiTypes = {
 		# Widescreen mode
 		if_resolution = {
 			min_width = 3440
-			# Should prevent it from taking effect in 4K 
-			max_height = 1601
+			 
+			
 			position = { x=-1130 y=34 }
 		}
 		
@@ -307,8 +307,8 @@ guiTypes = {
 		# Widescreen mode
 		if_resolution = {
 			min_width = 3440
-			# Should prevent it from taking effect in 4K 
-			max_height = 1601
+			 
+			
 			size = { width=50% height=100% }
 			position = { x=960 y=0 }
 		}

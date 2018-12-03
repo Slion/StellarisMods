@@ -72,7 +72,7 @@ guiTypes = {
 		# Widescreen mode
 		if_resolution = {
 			min_width = 3440
-			max_height = 1601
+			
 			position = { x = 743 y = 149 }
 			orientation = upper_left
 			origo = upper_left
@@ -4198,7 +4198,7 @@ guiTypes = {
 		# Widescreen mode
 		if_resolution = {
 			min_width = 3440
-			max_height = 1601			
+						
 			orientation = upper_left
 			origo = upper_left
 			position = { x = 1308 y = 150 }
@@ -4274,7 +4274,7 @@ guiTypes = {
 		# Widescreen mode
 		if_resolution = {
 			min_width = 3440
-			max_height = 1601			
+						
 			orientation = upper_left
 			origo = upper_left
 			position = { x = 1308 y = 150 }
@@ -4387,7 +4387,7 @@ guiTypes = {
 		# Widescreen mode
 		if_resolution = {
 			min_width = 3440
-			max_height = 1601			
+						
 			orientation = upper_left
 			origo = upper_left
 			position = { x = 1308 y = 150 }
