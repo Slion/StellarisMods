@@ -12,45 +12,38 @@ guiTypes = {
 	################################################################
 	# TRADITION ENTRY POSITIONS
 	################################################################
-	
+
 	#####   #####   #####
 	#61 #   #131#   #201#
 	#####   #####   #####
-	
 		##### 	#####
 		#96 # 	#166#
 	    ##### 	#####
-		
 	positionType = { name = "tr_domination_colonial_viceroys"         	position = { x = 61 y = 55 } }
 	positionType = { name = "tr_domination_imperious_architecture"     	position = { x = 131 y = 55 } }
 	positionType = { name = "tr_domination_grand_council"         		position = { x = 96 y = 125 } }
 	positionType = { name = "tr_domination_judgment_corps"     	 		position = { x = 201 y = 55 } }
 	positionType = { name = "tr_domination_workplace_motivators"      	position = { x = 201 y = 125 } }
-	
 	positionType = { name = "tr_expansion_reach_for_the_stars"        	position = { x = 96 y = 55 } }
 	positionType = { name = "tr_expansion_courier_network"            	position = { x = 61 y = 125 } }
 	positionType = { name = "tr_expansion_galactic_ambition" 		  	position = { x = 131 y = 125 } }
 	positionType = { name = "tr_expansion_colonization_fever"         	position = { x = 201 y = 55 } }
 	positionType = { name = "tr_expansion_a_new_life"                 	position = { x = 201 y = 125 } }
-	
 	positionType = { name = "tr_discovery_to_boldly_go"            	  	position = { x = 96 y = 55 } }
-	positionType = { name = "tr_discovery_databank_uplinks"  	  		position = { x = 96 y = 125 } }
+	positionType = { name = "tr_discovery_databank_uplinks"  	  	position = { x = 96 y = 125 } }
 	positionType = { name = "tr_discovery_science_division"        	  	position = { x = 166 y = 55 } }
 	positionType = { name = "tr_discovery_polytechnic_education"   	  	position = { x = 166 y = 125 } }
 	positionType = { name = "tr_discovery_faith_in_science"        	  	position = { x = 166 y = 195 } }
-	
 	positionType = { name = "tr_harmony_the_greater_good"             	position = { x = 201 y = 55 } }
 	positionType = { name = "tr_harmony_kinship"    			      	position = { x = 131 y = 55 } }
 	positionType = { name = "tr_harmony_utopian_dream" 		          	position = { x = 201 y = 125 } }
 	positionType = { name = "tr_harmony_bulwark_of_harmony"           	position = { x = 96 y = 125 } }
 	positionType = { name = "tr_harmony_mind_and_body"                	position = { x = 61 y = 55 } }
-	
 	positionType = { name = "tr_prosperity_administrative_operations" 	position = { x = 96 y = 55 } }
 	positionType = { name = "tr_prosperity_pursuit_of_profit"         	position = { x = 61 y = 125 } }
 	positionType = { name = "tr_prosperity_interstellar_franchising"	position = { x = 131 y = 125 } }
 	positionType = { name = "tr_prosperity_sct"                       	position = { x = 201 y = 55 } }
 	positionType = { name = "tr_prosperity_public_works"    			position = { x = 201 y = 125 } }
-	
 	positionType = { name = "tr_diplomacy_the_federation"			  	position = { x = 61 y = 55 } }
 	positionType = { name = "tr_diplomacy_entente_coordination"		  	position = { x = 61 y = 125 } }
 	positionType = { name = "tr_diplomacy_open_markets"				  	position = { x = 166 y = 55 } }
@@ -131,17 +124,21 @@ guiTypes = {
 	containerWindowType = {
 		name = "traditions_topbar_view"
 		size = { width = 1272 height = 600 } 
-
-		position = { x = -1270 y = 40 }
-		show_position = { x = 35 y = 40 }
-		hide_position = { x = -1270 y = 40 }
-		animation_time = 200
-		animation_type = decelerated
-
-		orientation = upper_left
-		moveable = no
+		moveable = yes
 		clipping = no
 		show_sound = "interface"
+
+		# Default mode
+		if_resolution = {
+			max_width = 3439
+			position = { x = 35 y = 40 }
+		}
+
+		# Widescreen mode
+		if_resolution = {
+			min_width = 3440			
+			position = { x = 743 y = 141 }
+		}
 
 		background = {
 			name = "background"
@@ -311,6 +308,7 @@ guiTypes = {
 					name = "arrow_2"
 					spriteType = "GFX_arrow_single"
 					position = { x = 217 y = 100 }
+				
 				}
 			}
 		}

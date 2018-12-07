@@ -3,14 +3,25 @@ guiTypes = {
 	containerWindowType = {
 		name = "situation_log"
 		size = { width = 900 height = 685 }
-		moveable = no
-		orientation = upper_left
+		moveable = yes
 		
-		position = { x = 35 y = 40 }
-		show_position = { x = 35 y = 40 }
-        hide_position = { x = -808 y = 40 }
-        animation_time = 200
-        animation_type = decelerated
+		# Default mode
+		if_resolution = {
+			max_width = 3439
+			position = { x = 35 y = 40 }
+		}
+
+		# Widescreen mode
+		if_resolution = {
+			min_width = 3440			
+			position = { x = 743 y = 141 }
+		}
+
+		background = {
+			name = "background"
+			spriteType = "GFX_invisible"
+		}
+
 	
 		containerWindowType = {
 			name = "galaxy_view_background_box"
@@ -20,6 +31,7 @@ guiTypes = {
 			background = {
 				name = "galaxy_view_background"
 				spriteType = "GFX_tile_large_bg"
+				alwaysTransparent = yes
 			}
 		}
 		
@@ -795,6 +807,7 @@ guiTypes = {
 				background = {
 					name = "situation_log_selected_background"
 					quadTextureSprite = "GFX_planet_bg_tile_frame"
+				#	alwaysTransparent = yes
 				}
 				
 				iconType = {
@@ -1218,7 +1231,7 @@ guiTypes = {
 	containerWindowType = {
 		name = "victory_empire_item"
 		size = { width = 300 height = 48 }
-
+		
 		buttonType = {
 			name = "button"
 			quadTextureSprite = "GFX_long_button"
@@ -1233,14 +1246,13 @@ guiTypes = {
 			quadTextureSprite = "GFX_empire_flag_32"
 			position = { x = 18 y = 10 }
 		}		
-		
 		iconType = {
 			name = "selected"
 			spriteType = "GFX_long_button_selected"
 			position = { x = 13 y = 5 }
 			alwaysTransparent = yes
 		}
-	
+		
 		instantTextBoxType={
 			name = "name"
 			font = "cg_16b"
@@ -1252,7 +1264,6 @@ guiTypes = {
 			format = left
 			alwaysTransparent = yes
 		}
-		
 		instantTextBoxType={
 			name = "score"
 			font = "cg_16b"
@@ -1263,6 +1274,6 @@ guiTypes = {
 			fixedSize = yes
 			format = left
 			alwaysTransparent = yes
-		}		
+		}
 	}
 }

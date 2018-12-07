@@ -1,20 +1,31 @@
 guiTypes = {
 	containerWindowType = {
-		name = "government_view"
-		position = { x=5 y=5 }
+		name = "government_view"		
 		size = { width = 563 height = 685 }
-		moveable = no
-		orientation = upper_left
+		moveable = yes
 
-		show_position = { x = 30 y = 34 }
-        hide_position = { x = -570 y = 34 }
-        animation_time = 200
-        animation_type = decelerated
+		# Default mode
+		if_resolution = {
+			max_width = 3439
+			position = { x = 30 y = 34 }
+		}
+
+		# Widescreen mode
+		if_resolution = {
+			min_width = 3440			
+			position = { x = 738 y = 135 }
+		}
+		
+		background = {
+			name = "background"
+			spriteType = "GFX_invisible"
+		}
 
 		iconType = {
 			name = "main_screen_bg"
 			spriteType = "GFX_main_screen_bg_short"
 			position = { x = 5 y = 6 }
+			alwaysTransparent = yes
 		}
 
 		iconType = {
@@ -1313,6 +1324,7 @@ guiTypes = {
 		size = { width =104 height=30 }
 		moveable = no
 
+
 		iconType = {
 			name ="species_plupp"
 			spriteType = "GFX_species_plupp"
@@ -1331,7 +1343,6 @@ guiTypes = {
 			orientation = right
 			alwaysTransparent = yes
 		}
-
 		buttonType = {
 			name = "piechart_button"
 			quadTextureSprite = "GFX_button_light"

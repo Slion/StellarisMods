@@ -1,14 +1,22 @@
 guiTypes = {
 	containerWindowType = {
 		@claims_view_width = 380
-
 		name = "claims_view"
-
 		size = { width = @claims_view_width height = 600 } 
-		hide_position = { x = -360 y = 115 } # Changed in code to center the window vertically
-		show_position = { x = 35 y = 115 } # Changed in code to center the window vertically
-		animation_type = decelerated
-		animation_time = 500.5
+		moveable = yes
+
+		# Default mode
+		if_resolution = {
+			max_width = 3439
+			position = { x = 35 y = 115 } # Changed in code to center the window vertically
+		}
+
+		# Widescreen mode
+		if_resolution = {
+			min_width = 3440
+			# Need to be beyond the extended side bar
+			position = { x = 0 y = 713 } # Changed in code to center the window vertically			
+		}
 
 		background = {
 			name = "background"

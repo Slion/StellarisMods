@@ -46,21 +46,29 @@ guiTypes = {
 
 	containerWindowType = {
 		name = "planet_view"
-		orientation = center
-		size = { width = 700 height = 635 }
-		origo = center
+		size = { width = 700 height = 635 }		
 		moveable = yes
 		clipping = no
+
+		# Default mode
+		if_resolution = {
+			max_width = 3439
+			orientation = center
+			origo = center
+		}
+
+		# Widescreen mode
+		if_resolution = {
+			min_width = 3440						
+			position = { x = 743 y = 141 }
+			orientation = upper_left
+		}
+
 
 		backGround = {
 			name = "background"
 			quadTextureSprite ="GFX_tiled_window_transparent" # makes window moveable
 		}
-
-		show_position = { x = -272 y = -0 }
-		hide_position = { x = -272 y = -0 }
-		animation_time = 0
-		animation_type = decelerated
 
 		containerWindowType = {
 			name = "planet_view_bg"

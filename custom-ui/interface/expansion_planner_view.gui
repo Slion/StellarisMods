@@ -295,12 +295,22 @@ guiTypes = {
 	containerWindowType = {
 		name = "expansion_planner_view"
 		size = { width = 1182 height = 595 }
-		show_position = { x = 35 y = 40 }
-		hide_position = { x = -1272 y = 40 }
-		animation_time = 200
-		animation_type = decelerated
 		clipping = no
+		moveable = yes
+		orientation = upper_left
 		show_sound = "interface"
+
+		# Default mode
+		if_resolution = {
+			max_width = 3439
+			position = { x = 35 y = 40 }
+		}
+
+		# Widescreen mode
+		if_resolution = {
+			min_width = 3440		
+			position = { x = 743 y = 141 }
+		}
 
 		background = {
 			name = "bg"

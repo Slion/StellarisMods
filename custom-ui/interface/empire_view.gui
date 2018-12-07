@@ -9,23 +9,26 @@
 guiTypes = {
 	containerWindowType = {
 		name = "empire_view"
-		show_position = { x = 35 y = 40 }
-		hide_position = { x = -1272 y = 40 }
-		animation_time = 200
-		animation_type = decelerated
 		size = { width=1272 height=620 }
 		orientation = UPPER_LEFT
 		show_sound = "interface"
+		moveable = yes
 
-		containerWindowType = {
-			name = "galaxy_view_background_box"
-			size = { width = 1272 height = 640 }
-			position = { x = 0 y = 0 }
+		# Default mode
+		if_resolution = {
+			max_width = 3439
+			position = { x = 35 y = 40 }
+		}
 
-			background = {
-				name = "galaxy_view_background"
-				spriteType = "GFX_tile_large_bg"
-			}
+		# Widescreen mode
+		if_resolution = {
+			min_width = 3440			
+			position = { x = 743 y = 141 }
+		}
+
+		background = {
+			name = "galaxy_view_background"
+			spriteType = "GFX_tile_large_bg"
 		}
 
 		iconType = {

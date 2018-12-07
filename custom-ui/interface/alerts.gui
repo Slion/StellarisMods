@@ -22,8 +22,22 @@ guiTypes = {
 	
 	positionType = {
 		name = "alerticon_startposition"
-		position = { x = 200 y = 30 }
+		
+		# Default mode
+		if_resolution = {
+			max_width = 3439
+			position = { x = 200 y = 30 }	
+		}
+
+		# Widescreen mode
+		if_resolution = {
+			min_width = 3440						
+			position = { x = 1160 y = 30 }
+		}
+
 	}
+
+
 
 	positionType = {
 		name = "alerticon_offset"

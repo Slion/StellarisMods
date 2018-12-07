@@ -14,8 +14,21 @@ guiTypes = {
 
 	containerWindowType = {
 		name = "maingui_flag"
-		position = { x=0 y=0 }
-		size = { width=100% height=100% }
+
+		# Default mode
+		if_resolution = {
+			max_width = 3439
+			position = { x=0 y=0 }
+			size = { width=100% height=100% }
+		}
+
+		# Widescreen mode
+		if_resolution = {
+			min_width = 3440						
+			size = { width=50% height=100% }
+			position = { x=960 y=0 }
+		}
+
 
 		iconType = {
 				name = "topbar_shield_decoration"
@@ -48,9 +61,20 @@ guiTypes = {
 	### TOPBAR FOR MUSICPLAYER
 	containerWindowType = {
 		name = "maingui_lower_topbar"
-		position = { x=-170 y=34 }
 		size = { width=170 height=36 }
 		orientation = upper_right
+
+		# Default mode		
+		if_resolution = {
+			max_width = 3439
+			position = { x=-170 y=34 }
+		}
+
+		# Widescreen mode
+		if_resolution = {
+			min_width = 3440										
+			position = { x=-1130 y=34 }
+		}
 
 		background = {
 			name ="background"
@@ -127,8 +151,20 @@ guiTypes = {
 
 	containerWindowType = {
 		name = "maingui"
-		position = { x=0 y=0 }
-		size = { width=100% height=100% }
+
+		# Default mode		
+		if_resolution = {
+			max_width = 3439
+			position = { x=0 y=0 }
+			size = { width=100% height=100% }
+		}
+
+		# Widescreen mode
+		if_resolution = {
+			min_width = 3440						
+			size = { width=50% height=100% }
+			position = { x=960 y=0 }
+		}
 
 		### Gamepad cursor
 
@@ -1075,9 +1111,7 @@ guiTypes = {
 
 	containerWindowType = {
 		name = "maingui_left_bar_buttons"
-		size = { width = 250 height = 670 } 
-		position = { x = -225 y = 35 }
-		hide_position = { x = -225 y = 35 }
+		size = { width = 250 height = 670 } 					
 		show_position = { x = -5 y = 35 }
 		show_animation_type = decelerated
 		hide_animation_type = accelerated
@@ -1086,6 +1120,26 @@ guiTypes = {
 		orientation = upper_left
 		moveable = no
 		clipping = no
+
+		# Default mode
+		if_resolution = {
+			max_width = 3439
+			# Start hidden
+			position = { x = -225 y = 35 }			
+			# Hide as usual
+			hide_position = { x = -225 y = 35 }
+		}
+
+		# Widescreen mode
+		if_resolution = {
+			min_width = 3440			
+			# TODO: Try start hidden to make sure we don't have both large and small icons?
+			position = { x = -5 y = 35 }					
+			# Do not hide on wide screen
+			hide_position = { x = -5 y = 35 }
+		}
+
+
 		
 		containerWindowType = {
 			name = "background"

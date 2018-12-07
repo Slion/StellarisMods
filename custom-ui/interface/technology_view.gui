@@ -2,18 +2,25 @@ guiTypes = {
 	containerWindowType = {
 		name = "technology_view_window"
 		size = { width=595 height=682 } 
-		
-		show_position = { x = 30 y = 35 }
-        hide_position = { x = -1070 y = 35 }
-        animation_time = 200
-        animation_type = decelerated
-	#	fade_time = 750
-    #   fade_type = smoothstep
-		
-		orientation = upper_left
-		moveable = no
+		moveable = yes
 		clipping = no
 		
+		# Default mode
+		if_resolution = {
+			max_width = 3439
+			position = { x = 30 y = 35 }
+		}
+
+		# Widescreen mode
+		if_resolution = {
+			min_width = 3440			
+			position = { x = 738 y = 136 }
+		}
+
+		background = {
+			name = "background"
+			spriteType = "GFX_invisible"
+		}
 
 	#	iconType = {
 	#		name = "main_screen_bg"
@@ -29,7 +36,7 @@ guiTypes = {
 			background = {
 				name = "black"
 				spriteType = "GFX_tile_outliner_bg"
-				#alwaysTransparent = yes
+				alwaysTransparent = yes
 			}
 		}
 		
@@ -46,12 +53,6 @@ guiTypes = {
 			position = { x = 11 y = 26 }
 		}
 		
-		
-		background = {
-			name = "background"
-			quadTextureSprite = "GFX_outliner_member_bg"
-		}	
-
 		buttonType = {
 			name = "close"
 			quadTextureSprite = "GFX_close"

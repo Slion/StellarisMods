@@ -14,12 +14,22 @@ guiTypes = {
 		name = "fleet_view"
 		size = { width = 475 height = 45 }
 
-		orientation = LOWER_LEFT
-		origo = LOWER_LEFT
+		orientation = lower_left
+		origo = lower_left
 		show_position = { x = 35 y = -30 }
 		hide_position = { x = -475 y = -30 }
 		animation_time = 200
-		animation_type = decelerated
+		#animation_type = decelerated
+		# SL: Unfortunatly there is some hard coded logic that will mess up the window position if it was moved
+		# Therefore we could not get it to work as it should
+		moveable = no
+
+		# SL: Background needed for moveable to work
+		background = {
+			name = "background"
+			# Just use a transparent bitmap
+			quadTextureSprite = "GFX_tiled_window_transparent"
+		}
 
 		# Controlls size of top bar
 
@@ -45,6 +55,8 @@ guiTypes = {
 				name = "fleet_view_entry_bg"
 				spriteType = "GFX_fleet_view_top_panel_bg"
 				position = { x = 0 y = 0 }
+				# Needed for moveable to work
+				alwaysTransparent = yes
 			}
 
 			containerWindowType = {
@@ -438,6 +450,7 @@ guiTypes = {
 				format = left
 				text = "YES"
 				text_color_code = "E"
+				alwaysTransparent = yes
 			}
 		}
 
@@ -794,7 +807,6 @@ guiTypes = {
 				fixedSize = yes
 				format = left
 			}
-			
 			instantTextBoxType = {
 				name = "piracy_suppression"
 				position = { x = 200 y = @status_y }

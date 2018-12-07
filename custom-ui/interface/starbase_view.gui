@@ -8,11 +8,32 @@
 guiTypes = {
 	containerWindowType = {
 		name = "starbase_view"
-		orientation = lower_left
-		origo = lower_left
-		moveable = no
+		moveable = yes
 		clipping = yes
 		
+		# Default mode
+		if_resolution = {
+			max_width = 3439
+			position = { x = 35 y = -35 }
+			orientation = lower_left
+			origo = lower_left
+		}
+
+		# Widescreen mode
+		if_resolution = {
+			min_width = 3440
+			
+			position = { x = 743 y = 141 }
+			orientation = upper_left
+			origo = upper_left
+		}
+
+		# SL: Background needed for moveable to work
+		background = {
+			name = "background_drag_handle"
+			quadTextureSprite = "GFX_invisible"
+		}
+
 		if_resolution = {
 		max_height = 800		
 		size = { width = @view_w height = 611 }
@@ -23,10 +44,6 @@ guiTypes = {
 		size = { width = @view_w height = @view_h }		
 		}
 		
-		show_position = { x = 35 y = -35 }
-		hide_position = { x = -563 y = -32 }
-		animation_time = 200
-		animation_type = decelerated
 		show_sound = "select_starbase"
 		
 	
@@ -36,6 +53,8 @@ guiTypes = {
 			spriteType = "GFX_planet_bg_top"
 			position = { x = 0 y = 0 }
 			orientation = upper_left
+			#SL: Breaks moveable unless alwaysTransparent is set
+			alwaysTransparent = yes
 		}
 
 
@@ -150,7 +169,7 @@ guiTypes = {
 			name = "starbase_rename_button"
 			quadTextureSprite = "gfx_transparency_button"
 			position = { x = 5 y = 2 }
-			size = { x = 278 y = 30 }
+			size = { x = 139 y = 30 }
 		}
 
 		containerWindowType = {
@@ -308,7 +327,6 @@ guiTypes = {
 					add_horizontal = yes
 					max_slots_horizontal = 3
 				}
-
 				buttonType = {
 					name = "trade_routes"
 					quadTextureSprite = "GFX_standard_button_180_34_button"
@@ -318,7 +336,6 @@ guiTypes = {
 					text = "TRADE_ROUTES"
 					font = "cg_16b"
 				}
-
 			}
 
 			containerWindowType = {
@@ -847,8 +864,8 @@ guiTypes = {
 
 	containerWindowType = {
 		name = "starbase_side_view"
-		
-		
+		moveable = yes
+				
 		if_resolution = {
 		max_height = 800	
 
@@ -1402,7 +1419,6 @@ guiTypes = {
 			alwaysTransparent = yes
 		}
 	}
-
 	### Popcat selection dialog
 	containerWindowType = {
 		name = "popcat_selection_dialog"
@@ -1410,19 +1426,16 @@ guiTypes = {
 		size = { width = 353 height = 518 }
 		orientation = center
 		moveable = yes
-
 		background = {
 			name = "popcat_selection_dialog"
 			quadTextureSprite = "GFX_start_screen_bg"
 		}
-
 		iconType = {
 			name = "hex_bg"
 			spriteType = "GFX_hex_bg"
 			position = { x = -10 y = -5 }
 			alwaysTransparent = yes
 		}
-
 		buttonType = {
 			name = "close"
 			quadTextureSprite = "GFX_close"
@@ -1431,7 +1444,6 @@ guiTypes = {
 			shortCut = "ESCAPE"
 			clicksound = "back_click"
 		}
-
 		instantTextBoxType = {
 			name = "title"
 			font = "malgun_goth_24"
@@ -1443,7 +1455,6 @@ guiTypes = {
 			orientation = upper_left
 			alwaysTransparent = yes
 		}
-
 		smoothListBoxType = {
 			name = "popcats"
 			position = { x = 18 y = 48 }
@@ -1454,35 +1465,28 @@ guiTypes = {
 			autohide_scrollbar = yes
 			spacing = 5
 		}
-
-
 	}
-
 	### Popcat selection entry
 	containerWindowType = {
 		name = "popcat_selection_entry"
 		position = { x = 10 y = 0 }
 		size = { width = 300 height = 70 }
 		clipping = no
-
 		background = {
 			name = "popcat_selection_entry_background"
 			quadTextureSprite = "GFX_black_box_planet_view"
 		}
-
 		buttonType = {
 			name = "baseline_pop"
 			spriteType = "GFX_drop_area_green"
 			size = { x = 300 y = 70 }
 			alwaysTransparent = yes
 		}
-
 		containerWindowType = {
 			name = "portrait"
 			position = { x = 5 y = 5 }
 			size = { width = 65 height = 60 }
 			clipping = yes
-
 			iconType = {
 				name = "species_portrait"
 				spriteType = "GFX_portrait_character"
@@ -1491,7 +1495,6 @@ guiTypes = {
 				alwaysTransparent = yes
 			}
 		}
-
 		instantTextBoxType = {
 			name = "species_name"
 			font = "cg_16b"
@@ -1505,7 +1508,6 @@ guiTypes = {
 			text_color_code = "E"
 			alwaysTransparent = yes
 		}
-
 		instantTextBoxType = {
 			name = "ideal_planet_type"
 			font = "cg_16b"
@@ -1519,7 +1521,6 @@ guiTypes = {
 			alwaysTransparent = yes
 			pdx_tooltip = "IDEAL_PLANET_CLASS_TOOLTIP"
 		}
-
 		overlappingElementsBoxType = {
 			name = "traits_list"
 			size = { x = 128 y = 24 }
@@ -1529,11 +1530,9 @@ guiTypes = {
 			spacing = 0
 		}
 	}
-
 	containerWindowType = {
 		name = "terraform_entry"
 		size = { width = 140 height = 30 }
-
 		buttonType = {
 			name = "button"
 			quadTextureSprite = "GFX_general_interface_button"

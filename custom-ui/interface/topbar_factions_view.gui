@@ -2,18 +2,22 @@ guiTypes = {
 	containerWindowType = {
 		name = "topbar_factions_view"
 		size = { width = 1272 height = 640 } 
-		
-		position = { x = -1270 y = 40 }
-		show_position = { x = 35 y = 40 }
-        hide_position = { x = -1270 y = 40 }
-        animation_time = 200
-        animation_type = decelerated
-		
-		orientation = upper_left
-		moveable = no
+		moveable = yes
 		clipping = no
 		show_sound = "interface"
-		
+
+		# Default mode
+		if_resolution = {
+			max_width = 3439
+			position = { x = 35 y = 40 }
+		}
+
+		# Widescreen mode
+		if_resolution = {
+			min_width = 3440			
+			position = { x = 743 y = 141 }
+		}
+
 		background = {
 			name = "background"
 			spriteType = "GFX_tile_outliner_bg"
