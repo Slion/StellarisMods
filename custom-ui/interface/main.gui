@@ -1112,44 +1112,28 @@ guiTypes = {
 	containerWindowType = {
 		name = "maingui_left_bar_buttons"
 		size = { width = 250 height = 670 } 					
-		show_position = { x = -5 y = 35 }
-		show_animation_type = decelerated
-		hide_animation_type = accelerated
-		animation_time = 200
 
 		orientation = upper_left
-		moveable = no
+		moveable = yes
 		clipping = no
 
 		# Default mode
 		if_resolution = {
 			max_width = 3439
 			# Start hidden
-			position = { x = -225 y = 35 }			
-			# Hide as usual
-			hide_position = { x = -225 y = 35 }
+			position = { x = -225 y = 35 }
 		}
 
 		# Widescreen mode
 		if_resolution = {
-			min_width = 3440			
-			# TODO: Try start hidden to make sure we don't have both large and small icons?
+			min_width = 3440
+			# Always showing large version of the side bar			
 			position = { x = -5 y = 35 }					
-			# Do not hide on wide screen
-			hide_position = { x = -5 y = 35 }
 		}
-
-
-		
-		containerWindowType = {
-			name = "background"
-			size = { width = 250 height = 640 }
-			position = { x = 5 y = 5 }
 			
-			background = {
-				name = "navbar_bg"
-				spriteType = "GFX_navbar_bg"
-			}
+		background = {
+			name = "navbar_bg"
+			spriteType = "GFX_navbar_bg"
 		}
 
 		buttonType = {
