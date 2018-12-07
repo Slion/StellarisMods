@@ -8,6 +8,7 @@ Our Custom UI mod was developed with widescreen user experience in mind on a res
 
 ### Installation
 For Stellaris v2.2 [subscribe here.](https://steamcommunity.com/sharedfiles/filedetails/?id=1584866288)
+
 For Stellaris v2.1 [subscribe here.](https://steamcommunity.com/sharedfiles/filedetails/?id=1574120097)
 
 ### Mission
