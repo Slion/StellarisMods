@@ -12,25 +12,12 @@ guiTypes = {
 	containerWindowType = {
 		name = "fleet_manager_view"
 		size = { width = 930 height = 595 }
-		moveable = yes		
+		show_position = { x = 35 y = 40 }
+		hide_position = { x = -1272 y = 40 }
+		animation_time = 200
+		animation_type = decelerated
 		clipping = no
 		show_sound = "interface"
-
-		# Default mode
-		if_resolution = {
-			max_width = 3439
-			orientation = center
-			origo = center
-		}
-
-		# Widescreen mode
-		if_resolution = {
-			min_width = 3440
-			
-			position = { x = 743 y = 141 }
-			orientation = upper_left
-			origo = upper_left
-		}
 
 		background = {
 			name = "bg"
@@ -987,7 +974,8 @@ guiTypes = {
 			position = { x = 257 y = 10 }
 			quadTextureSprite ="GFX_fleet_manager_minus"
 			pdx_tooltip = "DECREASE_FM"
-			clicksound = decrement_click
+			clicksound = "decrement_click"
+			oversound = "no_sound"
 		}
 
 		instantTextBoxType={
@@ -1007,7 +995,8 @@ guiTypes = {
 			position = { x = 333 y = 10 }
 			quadTextureSprite ="GFX_fleet_manager_plus"
 			pdx_tooltip = "INCREASE_FM"
-			clicksound = increment_click
+			clicksound = "increment_click"
+			oversound = "no_sound"
 		}
 
 		iconType = {

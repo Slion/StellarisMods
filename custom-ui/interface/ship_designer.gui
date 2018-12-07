@@ -21,25 +21,14 @@ guiTypes = {
 	}
 	containerWindowType = {
 		name = "ship_designer"
+		position = { x = -1280 y = 40 }
+		show_position = { x = 35 y = 40 }
+		hide_position = { x = -1280 y = 40 }
+		animation_time = 200
+		animation_type = decelerated
 		size = { width = 1272 height = 678 }
-		moveable = yes
+		Orientation = upper_left
 		show_sound = "interface"
-		
-		# Default mode
-		if_resolution = {
-			max_width = 3439
-			orientation = center
-			origo = center
-		}
-
-		# Widescreen mode
-		if_resolution = {
-			min_width = 3440
-			
-			position = { x = 743 y = 141 }
-			orientation = upper_left
-			origo = upper_left
-		}
 
 		background = {
 			name = "background"
@@ -245,7 +234,7 @@ guiTypes = {
 					name = "cost"
 					font = "cg_16b"
 					text = "SHIP_STAT_COST"
-					position = { x= @label_x y= 60 }
+					position = { x= @label_x y= 110 }
 					maxWidth = 160
 					maxHeight = 20
 					fixedsize = yes
@@ -256,18 +245,19 @@ guiTypes = {
 					name = "cost_value"
 					font = "cg_16b"
 					text = ""
-					position = { x= @value_x y= 60 }
+					position = { x= @value_x y= 110 }
 					maxWidth = 160
-					maxHeight = 20
+					maxHeight = 40
 					fixedsize = yes
 					format = right
+					text_color_code = "Y"
 				}
 
 				instantTextBoxType={
 					name = "build_time"
 					font = "cg_16b"
 					text = "SHIP_STAT_BUILD_TIME"
-					position = { x= @label_x y= 85 }
+					position = { x= @label_x y= 60 }
 					maxWidth = 160
 					maxHeight = 20
 					fixedsize = yes
@@ -278,55 +268,36 @@ guiTypes = {
 					name = "build_time_value"
 					font = "cg_16b"
 					text = ""
+					position = { x= @value_x y= 60 }
+					maxWidth = 160
+					maxHeight = 20
+					fixedsize = yes
+					format = right
+					text_color_code = "Y"
+				}
+
+				instantTextBoxType={
+					name = "upkeep"
+					font = "cg_16b"
+					text = "SHIP_STAT_ENERGY_MAINTENENCE"
+					position = { x= @label_x y= 85 }
+					maxWidth = 160
+					maxHeight = 20
+					fixedsize = yes
+					format = left
+				}
+
+				instantTextBoxType={
+					name = "upkeep_value"
+					font = "cg_16b"
+					text = ""
 					position = { x= @value_x y= 85 }
 					maxWidth = 160
 					maxHeight = 20
 					fixedsize = yes
 					format = right
+					text_color_code = "Y"
 				}
-
-				instantTextBoxType={
-					name = "energy_maintenance"
-					font = "cg_16b"
-					text = "SHIP_STAT_ENERGY_MAINTENENCE"
-					position = { x= @label_x y= 110 }
-					maxWidth = 160
-					maxHeight = 20
-					fixedsize = yes
-					format = left
-				}
-
-				instantTextBoxType={
-					name = "energy_maintenance_value"
-					font = "cg_16b"
-					text = ""
-					position = { x= @value_x y= 110 }
-					maxWidth = 160
-					maxHeight = 20
-					fixedsize = yes
-					format = right
-				}
-				
-				instantTextBoxType={
-					name = "mineral_maintenance"
-					font = "cg_16b"
-					position = { x= @label_x y= 130 }
-					maxWidth = 160
-					maxHeight = 20
-					fixedsize = yes
-					format = left
-				}
-
-				instantTextBoxType={
-					name = "mineral_maintenance_value"
-					font = "cg_16b"
-					text = ""
-					position = { x= @value_x y= 130 }
-					maxWidth = 160
-					maxHeight = 20
-					fixedsize = yes
-					format = right
-				}				
 
 				instantTextBoxType={
 					name = "combat"
@@ -617,38 +588,6 @@ guiTypes = {
 			Orientation = "UPPER_RIGHT"
 			shortcut = "ESCAPE"
 			clicksound = "back_click"
-		}
-
-		containerWindowType = {
-			name = "graphical_culture_window"
-			position = { x=870 y=10 }
-			size = { width = 398 height = 20 }
-			moveable = no
-			orientation = upper_left
-
-			instantTextBoxType={
-				position = {x = 170 y = 0 }
-				name = "culture"
-				font = "cg_16b"
-				borderSize = {x = 0 y = 0}
-				maxWidth = 200
-				text = "mammalian"
-				orientation = "UPPER_LEFT"
-				format = center
-				alwaystransparent = yes
-			}
-
-			buttonType = {
-				name = "decrease_button"
-				position = { x = 150 y = -10 }
-				quadTextureSprite ="GFX_button_back"
-			}
-
-			buttonType = {
-				name = "increase_button"
-				position = { x = 350 y = -10 }
-				quadTextureSprite ="GFX_fleet_order_button_move"
-			}
 		}
 	}
 

@@ -2,29 +2,18 @@ guiTypes = {
 	containerWindowType = {
 		name = "technology_view_window"
 		size = { width=595 height=682 } 
-		moveable = yes
+		
+		show_position = { x = 30 y = 35 }
+        hide_position = { x = -1070 y = 35 }
+        animation_time = 200
+        animation_type = decelerated
+	#	fade_time = 750
+    #   fade_type = smoothstep
+		
+		orientation = upper_left
+		moveable = no
 		clipping = no
 		
-		# Default mode
-		if_resolution = {
-			max_width = 3439
-			orientation = center
-			origo = center
-		}
-
-		# Widescreen mode
-		if_resolution = {
-			min_width = 3440
-			
-			position = { x = 738 y = 136 }
-			orientation = upper_left
-			origo = upper_left
-		}
-
-		background = {
-			name = "background"
-			spriteType = "GFX_invisible"
-		}
 
 	#	iconType = {
 	#		name = "main_screen_bg"
@@ -40,7 +29,7 @@ guiTypes = {
 			background = {
 				name = "black"
 				spriteType = "GFX_tile_outliner_bg"
-				alwaysTransparent = yes
+				#alwaysTransparent = yes
 			}
 		}
 		
@@ -57,6 +46,12 @@ guiTypes = {
 			position = { x = 11 y = 26 }
 		}
 		
+		
+		background = {
+			name = "background"
+			quadTextureSprite = "GFX_outliner_member_bg"
+		}	
+
 		buttonType = {
 			name = "close"
 			quadTextureSprite = "GFX_close"
@@ -584,7 +579,7 @@ guiTypes = {
 			iconType = {
 				name ="category_icon"
 				spriteType = "GFX_traits"
-				position = { x= 547 y = 112 }
+				position = { x= 551 y = 108 }
 				scale = 1.0
 			}
 
@@ -726,7 +721,7 @@ guiTypes = {
 		iconType = {
 			name ="category_icon"
 			spriteType = "GFX_traits"
-			position = { x= 430 y = 38 }
+			position = { x= 434 y = 40 }
 			scale = 1.0
 		}
 		
@@ -865,7 +860,7 @@ guiTypes = {
 
 	containerWindowType = {
 		name = "technology_view_unlock_entry"
-		size = { width = 340 height = 60 } #Height will be changed by code according to requirements
+		size = { width = 360 height = 60 } #Height will be changed by code according to requirements
 		position = { x = 0 y = 0 }
 		clipping = yes
 
@@ -874,7 +869,7 @@ guiTypes = {
 			font = "cg_16b"
 			text = ""
 			position = { x = 5 y = 0 } # Please don't move from (0,0)
-			maxWidth = 337
+			maxWidth = 360
 			maxHeight = 60
 			format = left
 			fixedsize = yes
@@ -882,7 +877,7 @@ guiTypes = {
 	}
 
 	containerWindowType = {
-		name = "technology_view_unlock_entry_tile_blocker"
+		name = "technology_view_unlock_entry_deposit_blocker"
 		size = { width = 340 height = 60 }
 		position = { x = 0 y = 0 }
 		clipping = yes
@@ -964,13 +959,13 @@ guiTypes = {
 	}	
 
 	containerWindowType = {
-		name = "technology_view_tile_blocker"
+		name = "technology_view_deposit_blocker"
 		size = { width = 50 height = 50 }
 		position = { x = 0 y = 0 }
 
 		iconType = {
 			name = "icon"
-			spriteType = "GFX_tile_frame_blocker"
+			spriteType = "GFX_planet_background_frame_blocker"
 			position = { x = 0 y = 0 }
 			scale = 0.5
 		}				

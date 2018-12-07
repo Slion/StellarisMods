@@ -2,24 +2,10 @@ guiTypes = {
 
 	containerWindowType = {
 		name = "diplomacy_view"
+		orientation = center
+		origo = center
 		moveable = yes
 		size = { width=990 height=635 }
-
-		# Default mode
-		if_resolution = {
-			max_width = 3439
-			orientation = center
-			origo = center
-		}
-
-		# Widescreen mode
-		if_resolution = {
-			min_width = 3440
-			
-			position = { x = 743 y = 141 }
-			orientation = upper_left
-			origo = upper_left
-		}
 
 		backGround = {
 			name = "background"
@@ -620,7 +606,7 @@ guiTypes = {
 			instantTextBoxType={
 				name = "action_title"
 				font = "cg_16b"
-				position = { x = 24 y = -6 }
+				position = { x = 24 y = -10 }
 				maxWidth = 920
 				maxHeight = 20
 				fixedSize = yes
@@ -632,9 +618,9 @@ guiTypes = {
 			instantTextBoxType={
 				name = "action_desc"
 				font = "cg_16b"
-				position = { x = 24 y = 14 }
+				position = { x = 24 y = 10 }
 				maxWidth = 920
-				maxHeight = 60
+				maxHeight = 80
 				fixedSize = yes
 				Orientation = "UPPER_LEFT"
 				format = left

@@ -3,29 +3,14 @@ guiTypes = {
 	containerWindowType = {
 		name = "situation_log"
 		size = { width = 900 height = 685 }
-		moveable = yes
+		moveable = no
+		orientation = upper_left
 		
-		# Default mode
-		if_resolution = {
-			max_width = 3439
-			orientation = center
-			origo = center
-		}
-
-		# Widescreen mode
-		if_resolution = {
-			min_width = 3440
-			
-			position = { x = 743 y = 141 }
-			orientation = upper_left
-			origo = upper_left
-		}
-
-		background = {
-			name = "background"
-			spriteType = "GFX_invisible"
-		}
-
+		position = { x = 35 y = 40 }
+		show_position = { x = 35 y = 40 }
+        hide_position = { x = -808 y = 40 }
+        animation_time = 200
+        animation_type = decelerated
 	
 		containerWindowType = {
 			name = "galaxy_view_background_box"
@@ -35,7 +20,6 @@ guiTypes = {
 			background = {
 				name = "galaxy_view_background"
 				spriteType = "GFX_tile_large_bg"
-				alwaysTransparent = yes
 			}
 		}
 		
@@ -811,7 +795,6 @@ guiTypes = {
 				background = {
 					name = "situation_log_selected_background"
 					quadTextureSprite = "GFX_planet_bg_tile_frame"
-				#	alwaysTransparent = yes
 				}
 				
 				iconType = {
@@ -1231,18 +1214,11 @@ guiTypes = {
 		}
 	}
 	
-	### VICTORY CONDITION ITEM
+	### VICTORY CONDITION EMPIRE ITEM
 	containerWindowType = {
-		name = "victory_condition_item"
+		name = "victory_empire_item"
 		size = { width = 300 height = 48 }
-		
-		iconType = {
-			name = "progressbar"
-			spriteType = "GFX_situation_log_progressbar"
-			frame = 0
-			position = { x = 14 y = 5 }
-			alwaysTransparent = yes
-		}
+
 		buttonType = {
 			name = "button"
 			quadTextureSprite = "GFX_long_button"
@@ -1252,23 +1228,41 @@ guiTypes = {
 			oversound = no_sound
 		}
 		
+		buttonType = {
+			name = "empire_flag"
+			quadTextureSprite = "GFX_empire_flag_32"
+			position = { x = 18 y = 10 }
+		}		
+		
 		iconType = {
 			name = "selected"
 			spriteType = "GFX_long_button_selected"
 			position = { x = 13 y = 5 }
 			alwaysTransparent = yes
 		}
-		
+	
 		instantTextBoxType={
 			name = "name"
-			font = "malgun_goth_24"
+			font = "cg_16b"
 			text = "TITLE"
-			position = { x = 20 y = 12 }
+			position = { x = 55 y = 10 }
+			maxWidth = 200
+			maxHeight = 10
+			fixedSize = yes
+			format = left
+			alwaysTransparent = yes
+		}
+		
+		instantTextBoxType={
+			name = "score"
+			font = "cg_16b"
+			text = "250"
+			position = { x = 55 y = 25 }
 			maxWidth = 260
 			maxHeight = 40
 			fixedSize = yes
-			format = centre
+			format = left
 			alwaysTransparent = yes
-		}
+		}		
 	}
 }

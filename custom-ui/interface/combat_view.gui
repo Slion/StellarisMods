@@ -40,27 +40,15 @@ guiTypes = {
 
 	containerWindowType = {
 		name = "combat_view"
-		size = { width = 560 height = 568 }		
+		size = { width = 560 height = 568 }
+		position = { x = 35 y = -42 }
 		orientation = lower_left
 		origo = lower_left
-		moveable = yes
-
-		# Default mode
-		if_resolution = {
-			max_width = 3439
-			position = { x = 6 y = -42 }
-		}
-
-		# Widescreen mode
-		if_resolution = {
-			min_width = 3440
-			
-			position = { x = 743 y = -42 }
-		}
+		moveable = no
 
 		background = {
 			name = "background"
-			quadTextureSprite = "GFX_invisible"
+			quadTextureSprite = "GFX_outliner_member_bg"
 		}
 
 		iconType = {
@@ -103,7 +91,6 @@ guiTypes = {
 			maxHeight = 20
 			fixedSize = yes
 			format = left
-			alwaystransparent = yes
 		}
 
 		buttonType = {

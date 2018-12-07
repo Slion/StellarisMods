@@ -1,35 +1,20 @@
 guiTypes = {
 	containerWindowType = {
-		name = "government_view"		
+		name = "government_view"
+		position = { x=5 y=5 }
 		size = { width = 563 height = 685 }
-		moveable = yes
+		moveable = no
+		orientation = upper_left
 
-		# Default mode
-		if_resolution = {
-			max_width = 3439
-			orientation = center
-			origo = center
-		}
-
-		# Widescreen mode
-		if_resolution = {
-			min_width = 3440
-			
-			position = { x = 738 y = 135 }
-			orientation = upper_left
-			origo = upper_left
-		}
-		
-		background = {
-			name = "background"
-			spriteType = "GFX_invisible"
-		}
+		show_position = { x = 30 y = 34 }
+        hide_position = { x = -570 y = 34 }
+        animation_time = 200
+        animation_type = decelerated
 
 		iconType = {
 			name = "main_screen_bg"
 			spriteType = "GFX_main_screen_bg_short"
 			position = { x = 5 y = 6 }
-			alwaysTransparent = yes
 		}
 
 		iconType = {
@@ -115,7 +100,7 @@ guiTypes = {
 		buttonType = {
 			name = "tab_demographics"
 			quadTextureSprite = "GFX_tab_2_inactive"
-			position = { x= 250 y = @tabheight }
+			position = { x= 114 y = @tabheight }
 			font = "cg_16b"
 			buttonText = "DEMOGRAPHICS"
 			buttonFont = "cg_16b"
@@ -127,7 +112,7 @@ guiTypes = {
 		buttonType = {
 			name = "tab_demographics_active"
 			quadTextureSprite = "GFX_tab_2_active"
-			position = { x= 250 y = @tabheight }
+			position = { x= 114 y = @tabheight }
 			font = "cg_16b"
 			buttonText = "DEMOGRAPHICS"
 			buttonFont = "cg_16b"
@@ -140,7 +125,7 @@ guiTypes = {
 		buttonType = {
 			name = "tab_advisor"
 			quadTextureSprite = "GFX_tab_2_inactive"
-			position = { x = 386 y = @tabheight }
+			position = { x= 250 y = @tabheight }
 			font = "cg_16b"
 			buttonText = "GOVERNMENT_ADVISOR_TAB"
 			buttonFont = "cg_16b"
@@ -153,7 +138,7 @@ guiTypes = {
 		buttonType = {
 			name = "tab_advisor_active"
 			quadTextureSprite = "GFX_tab_2_active"
-			position = { x = 386 y = @tabheight }
+			position = { x= 250 y = @tabheight }
 			font = "cg_16b"
 			buttonText = "GOVERNMENT_ADVISOR_TAB"
 			buttonFont = "cg_16b"
@@ -421,7 +406,7 @@ guiTypes = {
 			}
 			
 			containerWindowType = {
-				name = "piracy_window"
+				name = "cohesion_window"
 				size = { width = 100 height = 45 }
 				position = { x = 3 y = 495 }
 
@@ -432,10 +417,10 @@ guiTypes = {
 				}
 				
 				instantTextBoxType = {
-					name = "piracy_label"
+					name = "cohesion_label"
 					position = { x = 5 y = 2 }
 					font = "cg_16b"
-					text = "PIRACY_LABEL"
+					text = "COHESION_LABEL"
 					maxWidth = 100
 					maxHeight = 22
 					fixedSize = yes
@@ -443,15 +428,15 @@ guiTypes = {
 				}					
 				
 				iconType = {
-					name = "piracy_icon"
-					quadTextureSprite = "GFX_piracy_risk"
-					position = { x = 10 y = 23 }
+					name = "cohesion_icon"
+					quadTextureSprite = "GFX_empire_cohesion"
+					position = { x = 8 y = 21 }
 					orientation = "UPPER_LEFT"
 				}	
 
 				instantTextBoxType = {
-					name = "piracy_risk"
-					position = { x = 35 y = 23 }
+					name = "cohesion_risk"
+					position = { x = 32 y = 23 }
 					font = "cg_16b"
 					text = "12%"
 					maxWidth = 50
@@ -1328,11 +1313,6 @@ guiTypes = {
 		size = { width =104 height=30 }
 		moveable = no
 
-		background = {
-			name = "piechart_background"
-			spriteType = "GFX_tiles_frame_light"
-		}
-
 		iconType = {
 			name ="species_plupp"
 			spriteType = "GFX_species_plupp"
@@ -1350,6 +1330,14 @@ guiTypes = {
 			fixedsize = yes
 			orientation = right
 			alwaysTransparent = yes
+		}
+
+		buttonType = {
+			name = "piechart_button"
+			quadTextureSprite = "GFX_button_light"
+			position = { x=0 y=0 }
+			size = { x=100 y=28 }
+			clicksound = "menu_slide_open"
 		}
 	}
 

@@ -8,31 +8,11 @@
 guiTypes = {
 	containerWindowType = {
 		name = "starbase_view"
-		moveable = yes
+		orientation = lower_left
+		origo = lower_left
+		moveable = no
 		clipping = yes
 		
-		# Default mode
-		if_resolution = {
-			max_width = 3439
-			orientation = center
-			origo = center
-		}
-
-		# Widescreen mode
-		if_resolution = {
-			min_width = 3440
-			
-			position = { x = 743 y = 141 }
-			orientation = upper_left
-			origo = upper_left
-		}
-
-		# SL: Background needed for moveable to work
-		background = {
-			name = "background_drag_handle"
-			quadTextureSprite = "GFX_invisible"
-		}
-
 		if_resolution = {
 		max_height = 800		
 		size = { width = @view_w height = 611 }
@@ -43,6 +23,10 @@ guiTypes = {
 		size = { width = @view_w height = @view_h }		
 		}
 		
+		show_position = { x = 35 y = -35 }
+		hide_position = { x = -563 y = -32 }
+		animation_time = 200
+		animation_type = decelerated
 		show_sound = "select_starbase"
 		
 	
@@ -52,8 +36,6 @@ guiTypes = {
 			spriteType = "GFX_planet_bg_top"
 			position = { x = 0 y = 0 }
 			orientation = upper_left
-			#SL: Breaks moveable unless alwaysTransparent is set
-			alwaysTransparent = yes
 		}
 
 
@@ -168,7 +150,7 @@ guiTypes = {
 			name = "starbase_rename_button"
 			quadTextureSprite = "gfx_transparency_button"
 			position = { x = 5 y = 2 }
-			size = { x = 139 y = 30 }
+			size = { x = 278 y = 30 }
 		}
 
 		containerWindowType = {
@@ -309,7 +291,7 @@ guiTypes = {
 					name = "modules_label"
 					font = "malgun_goth_24"
 					text = "STARBASE_MODULES"
-					position = { x = 0 y = 8 }
+					position = { x = 0 y = 6 }
 					maxWidth = 270
 					maxHeight = 20
 					fixedSize = yes
@@ -319,13 +301,24 @@ guiTypes = {
 
 				gridBoxType = {
 					name = "modules_grid"
-					position = { x = 48 y = 41 }
+					position = { x = 48 y = 35 }
 					size = { width = 0 height = 0 }
 					format = "UPPER_LEFT"
 					slotsize = { width = 58 height = 58 }
 					add_horizontal = yes
 					max_slots_horizontal = 3
 				}
+
+				buttonType = {
+					name = "trade_routes"
+					quadTextureSprite = "GFX_standard_button_180_34_button"
+					position = { x = 33 y = -54  }
+					Orientation = "LOWER_LEFT"
+					buttonFont = "cg_16b"
+					text = "TRADE_ROUTES"
+					font = "cg_16b"
+				}
+
 			}
 
 			containerWindowType = {
@@ -344,7 +337,7 @@ guiTypes = {
 					name = "buildings_label"
 					font = "malgun_goth_24"
 					text = "STARBASE_BUILDINGS"
-					position = { x = 0 y = 8 }
+					position = { x = 0 y = 6 }
 					maxWidth = 270
 					maxHeight = 20
 					fixedSize = yes
@@ -354,7 +347,7 @@ guiTypes = {
 
 				gridBoxType = {
 					name = "buildings_grid"
-					position = { x = 46 y = 44 }
+					position = { x = 46 y = 39 }
 					size = { width = 0 height = 0 }
 					format = "UPPER_LEFT"
 					slotsize = { width = 60 height = 60 }
@@ -854,8 +847,8 @@ guiTypes = {
 
 	containerWindowType = {
 		name = "starbase_side_view"
-		moveable = yes
-				
+		
+		
 		if_resolution = {
 		max_height = 800	
 
@@ -1053,14 +1046,7 @@ guiTypes = {
 			fixedSize = yes
 			format = centre
 			alwaysTransparent = yes
-		}
-
-		iconType = {
-			name = "missing_resources"
-			orientation = UPPER_RIGHT
-			position = { x = -38 y = 25 }
-			spriteType = "GFX_missing_resources_icon"
-			tooltip_mode_enabled = yes
+			text_color_code = "Y"
 		}
 	}
 
@@ -1098,13 +1084,13 @@ guiTypes = {
 			name = "cost"
 			font = "cg_16b"
 			text = "COST"
-			position = { x = -70 y = 6 }
-			maxWidth = 60
+			position = { x = -210 y = 6 }
+			maxWidth = 200
 			maxHeight = 20
 			fixedSize = yes
 			format = right
 			orientation = upper_right
-			text_color_code = "H"
+			text_color_code = "Y"
 		}
 
 		instantTextBoxType = {
@@ -1125,13 +1111,14 @@ guiTypes = {
 			name = "auto_gen"
 			font = "cg_16b"
 			text = "AUTO_GENERATED_BEST"
-			position = { x = -265 y = 6 }
+			position = { x = -265 y = 24 }
 			maxWidth = 200
 			maxHeight = 20
 			fixedSize = yes
 			format = right
 			orientation = upper_right
 #			alwaystransparent = yes
+			text_color_code = "E"
 		}
 
 		instantTextBoxType = {
@@ -1144,7 +1131,7 @@ guiTypes = {
 			fixedSize = yes
 			format = right
 			orientation = upper_right
-			text_color_code = "H"
+			text_color_code = "Y"
 		}
 	}
 
@@ -1155,6 +1142,7 @@ guiTypes = {
 		background = {
 			name = "planet_view_module_spaceport_buildqueue_entry_background"
 			spriteType = "GFX_dark_area_cut"
+			clicksound = "back_click"
 		}
 
 		iconType = {
@@ -1215,6 +1203,7 @@ guiTypes = {
 #			Orientation = "UPPER_RIGHT"
 			buttonFont = "cg_16b"
 			pdx_tooltip = "STARBASE_BUILDQUEUE_UP"
+			clicksound = "increment_click"
 		}
 
 		buttonType = {
@@ -1224,6 +1213,7 @@ guiTypes = {
 #			Orientation = "LOWER_RIGHT"
 			buttonFont = "cg_16b"
 			pdx_tooltip = "STARBASE_BUILDQUEUE_DOWN"
+			clicksound = "decrement_click"
 		}
 	}
 
@@ -1410,6 +1400,147 @@ guiTypes = {
 			vertical_alignment = center
 			orientation = upper_left
 			alwaysTransparent = yes
+		}
+	}
+
+	### Popcat selection dialog
+	containerWindowType = {
+		name = "popcat_selection_dialog"
+		position = { x = -172 y = -236 }
+		size = { width = 353 height = 518 }
+		orientation = center
+		moveable = yes
+
+		background = {
+			name = "popcat_selection_dialog"
+			quadTextureSprite = "GFX_start_screen_bg"
+		}
+
+		iconType = {
+			name = "hex_bg"
+			spriteType = "GFX_hex_bg"
+			position = { x = -10 y = -5 }
+			alwaysTransparent = yes
+		}
+
+		buttonType = {
+			name = "close"
+			quadTextureSprite = "GFX_close"
+			position = { x = -46 y = 8 }
+			orientation = "UPPER_RIGHT"
+			shortCut = "ESCAPE"
+			clicksound = "back_click"
+		}
+
+		instantTextBoxType = {
+			name = "title"
+			font = "malgun_goth_24"
+			text = "POPCAT_SELECTION_TITLE"
+			position = { x = 17 y = 14 }
+			maxWidth = 344
+			maxHeight = 40
+			fixedSize = yes
+			orientation = upper_left
+			alwaysTransparent = yes
+		}
+
+		smoothListBoxType = {
+			name = "popcats"
+			position = { x = 18 y = 48 }
+			orientation = upper_left
+			size = { x = 307 y = 454 }
+			borderSize = { x = 0 y = 0 }
+			scrollbartype = "standardlistbox_slider"
+			autohide_scrollbar = yes
+			spacing = 5
+		}
+
+
+	}
+
+	### Popcat selection entry
+	containerWindowType = {
+		name = "popcat_selection_entry"
+		position = { x = 10 y = 0 }
+		size = { width = 300 height = 70 }
+		clipping = no
+
+		background = {
+			name = "popcat_selection_entry_background"
+			quadTextureSprite = "GFX_black_box_planet_view"
+		}
+
+		buttonType = {
+			name = "baseline_pop"
+			spriteType = "GFX_drop_area_green"
+			size = { x = 300 y = 70 }
+			alwaysTransparent = yes
+		}
+
+		containerWindowType = {
+			name = "portrait"
+			position = { x = 5 y = 5 }
+			size = { width = 65 height = 60 }
+			clipping = yes
+
+			iconType = {
+				name = "species_portrait"
+				spriteType = "GFX_portrait_character"
+				position = { x = -28 y = -9 }
+				scale = 0.2
+				alwaysTransparent = yes
+			}
+		}
+
+		instantTextBoxType = {
+			name = "species_name"
+			font = "cg_16b"
+			text = "SPECIES"
+			position = { x = 80 y = 9 }
+			maxWidth = 344
+			maxHeight = 40
+			fixedSize = yes
+			format = left
+			orientation = upper_left
+			text_color_code = "E"
+			alwaysTransparent = yes
+		}
+
+		instantTextBoxType = {
+			name = "ideal_planet_type"
+			font = "cg_16b"
+			text = "SPECIES"
+			position = { x = 80 y = 39 }
+			maxWidth = 344
+			maxHeight = 40
+			fixedSize = yes
+			format = left
+			orientation = upper_left
+			alwaysTransparent = yes
+			pdx_tooltip = "IDEAL_PLANET_CLASS_TOOLTIP"
+		}
+
+		overlappingElementsBoxType = {
+			name = "traits_list"
+			size = { x = 128 y = 24 }
+			position = { x = -131 y = 3 }
+			orientation = "UPPER_RIGHT"
+			format = right
+			spacing = 0
+		}
+	}
+
+	containerWindowType = {
+		name = "terraform_entry"
+		size = { width = 140 height = 30 }
+
+		buttonType = {
+			name = "button"
+			quadTextureSprite = "GFX_general_interface_button"
+			position = { x = 0 y = 0  }
+			buttonFont = "hoi_16mbs"
+			text = ""
+			font = "hoi_16mbs"
 		}
 	}
 }
