@@ -4,24 +4,24 @@ guiTypes = {
 	containerWindowType = {
 		name = "market_view"
 		size = { width = 900 height = 685 }
-		moveable = no
+		moveable = yes
 		orientation = upper_left
+		
+		# Default mode
+		if_resolution = {
+			max_width = 3439
+			position = { x = 35 y = 40 }
+		}
 
-		position = { x = 35 y = 40 }
-		show_position = { x = 35 y = 40 }
-        hide_position = { x = -808 y = 40 }
-        animation_time = 200
-        animation_type = decelerated
+		# Widescreen mode
+		if_resolution = {
+			min_width = 3440
+			position = { x = 743 y = 141 }
+		}
 
-		containerWindowType = {
-			name = "galaxy_view_background_box"
-			size = { width = 900 height = 600 }
-			position = { x = 0 y = 0 }
-
-			background = {
-				name = "galaxy_view_background"
-				spriteType = "GFX_tile_large_bg"
-			}
+		background = {
+			name = "galaxy_view_background"
+			spriteType = "GFX_tile_large_bg"
 		}
 
 		iconType = {
