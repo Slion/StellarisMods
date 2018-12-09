@@ -251,11 +251,25 @@ guiTypes = {
 
 	containerWindowType = {
 		name = "expansion_planner_surface_view"
-		orientation = center
-		origo = center
 		moveable = yes
 		clipping = no
 		size = { width = 1080 height = 635 }
+
+		# Default mode
+		if_resolution = {
+			max_width = 3439
+			orientation = center
+			origo = center				
+		}
+
+		# Widescreen mode
+		if_resolution = {
+			min_width = 3440
+			orientation = upper_left		
+			origo = upper_left
+			# Putting it bellow the expansion planner, that won't work on 2560x1080 if ever we decide to support it
+			position = { x = 516 y = 672 }
+		}
 
 		background = {
 			name = "bg"
