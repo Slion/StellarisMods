@@ -21,7 +21,7 @@ guiTypes = {
 			position = { x = -960 y = 83 }
 		}
 
-		# Widescreen mode
+		# Widescreen mode 3440
 		if_resolution = {
 			min_width = 3440
 			max_width = 3440
