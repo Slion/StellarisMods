@@ -11,32 +11,44 @@ guiTypes = {
 	# Controlls the entire window
 
 	containerWindowType = {
-		name = "fleet_view"
-		size = { width = 475 height = 45 }
+		
+		@offset_x = 516
+		@offset_y = 78
+		@offset_y_plus_39 = 117
+		@offset_y_minus_4 = 74
 
-		orientation = lower_left
-		origo = lower_left
-		show_position = { x = 35 y = -30 }
-		hide_position = { x = -475 y = -30 }
-		animation_time = 200
+		name = "fleet_view"
+		# width should be 475 + @offset_x
+		size = { width = 991 height = 45 }
+		
+		
+		orientation = upper_left 
+		origo = upper_left
+		#show_position = { x = 35 y = -30 }
+		#hide_position = { x = -475 y = -30 }
+		#animation_time = 200
 		#animation_type = decelerated
 		# SL: Unfortunatly there is some hard coded logic that will mess up the window position if it was moved
 		# Therefore we could not get it to work as it should
 		moveable = no
+		clipping = no
 
 		# SL: Background needed for moveable to work
 		background = {
 			name = "background"
 			# Just use a transparent bitmap
 			quadTextureSprite = "GFX_tiled_window_transparent"
+			alwaysTransparent = yes
 		}
+
+		
 
 		# Controlls size of top bar
 
 		# Selected Fleets
 		smoothListboxType = {
 			name = "fleets"
-			position = { x = 0 y = 39 }
+			position = { x = @offset_x y = @offset_y_plus_39 }
 			size = { x = 475 y = 0 }
 			scrollbarType = "standardlistbox_slider"
 			borderSize = { x = 0 y = 0 }
@@ -48,8 +60,9 @@ guiTypes = {
 
 		containerWindowType = {
 			name = "header"
+			clipping = no
 			size = { width = 475 height = 50 }
-			position = { x = 0 y = -4 }
+			position = { x = @offset_x y = @offset_y_minus_4 }
 
 			iconType = {
 				name = "fleet_view_entry_bg"

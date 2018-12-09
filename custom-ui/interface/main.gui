@@ -1128,7 +1128,7 @@ guiTypes = {
 		if_resolution = {
 			min_width = 3440
 			# Always showing large version of the side bar			
-			position = { x = -5 y = 35 }					
+			position = { x = 1 y = 0 }					
 		}
 			
 		background = {
@@ -1138,7 +1138,23 @@ guiTypes = {
 
 		buttonType = {
 			name = "lock"
-			quadTextureSprite = "GFX_navbar_lock_less"
+			
+
+			# Default mode
+			if_resolution = {
+				max_width = 3439
+				# Show lock button
+				quadTextureSprite = "GFX_navbar_lock_less"
+			}
+
+			# Widescreen mode
+			if_resolution = {
+				min_width = 3440
+				# Hide lock button 			
+				quadTextureSprite = "GFX_invisible"
+			}
+
+
 			position = { x = -26 y = -26 }
 			Orientation = "LOWER_RIGHT"
 			clicksound = interface
