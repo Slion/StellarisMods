@@ -5,10 +5,19 @@ guiTypes = {
 		name = "trade_routes_view"
 
 		size = { width = @view_width height = 480 } 
-		hide_position = { x = -360 y = 200 } # Changed in code to center the window vertically
-		show_position = { x = 35 y = 200 } # Changed in code to center the window vertically
-		animation_type = decelerated
-		animation_time = 500.5
+		moveable = yes
+
+		# Default mode
+		if_resolution = {
+			max_width = 3439
+			position = { x = 35 y = 200 } # Changed in code to center the window vertically
+		}
+
+		# Widescreen mode
+		if_resolution = {
+			min_width = 3440						
+			position = { x = 516 y = 74 }
+		}
 
 		background = {
 			name = "background"

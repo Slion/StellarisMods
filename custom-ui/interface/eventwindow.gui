@@ -1,12 +1,34 @@
 guiTypes = {
 	containerWindowType = {
 		name = "EventWindow"
-		orientation = center
-		origo = center
 		moveable = yes
 		clipping = no
 		size = { width = 490 height=620 }
 		position = { x = 0 y = 0 }
+
+		# Default mode
+		if_resolution = {
+			max_width = 3439
+			orientation = center
+			origo = center
+		}
+
+		# Widescreen mode
+		if_resolution = {
+			min_width = 3840
+			orientation = upper_right		
+			origo = upper_right
+			position = { x = -960 y = 83 }
+		}
+
+		# Widescreen mode
+		if_resolution = {
+			min_width = 3440
+			max_width = 3440
+			orientation = upper_right		
+			origo = upper_right
+			position = { x = -760 y = 83 }
+		}
 
 		background = {
 			name = "background"
