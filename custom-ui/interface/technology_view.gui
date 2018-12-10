@@ -1,3 +1,6 @@
+@widescreen_x_minus_5 = 511
+@widescreen_y_minus_5 = 99
+
 guiTypes = {
 	containerWindowType = {
 		name = "technology_view_window"
@@ -14,7 +17,7 @@ guiTypes = {
 		# Widescreen mode
 		if_resolution = {
 			min_width = 3440			
-			position = { x = 511 y = 69 }
+			position = { x = @widescreen_x_minus_5 y = @widescreen_y_minus_5 }
 		}
 
 		background = {

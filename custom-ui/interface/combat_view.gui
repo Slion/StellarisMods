@@ -5,6 +5,8 @@
 @combat_stat_w = 64
 @combat_stat_h = 64
 
+@widescreen_x = 516
+
 guiTypes = {
 
 	containerWindowType = {
@@ -53,9 +55,8 @@ guiTypes = {
 
 		# Widescreen mode
 		if_resolution = {
-			min_width = 3440
-			
-			position = { x = 516 y = -42 }
+			min_width = 3440			
+			position = { x = @widescreen_x y = -42 }
 		}
 
 		background = {

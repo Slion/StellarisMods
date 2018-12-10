@@ -5,6 +5,10 @@
 @side_view_panel_width = 334
 @side_view_entry_width = 304
 
+@widescreen_x = 516
+@widescreen_y = 104
+
+
 guiTypes = {
 	containerWindowType = {
 		name = "starbase_view"
@@ -23,7 +27,7 @@ guiTypes = {
 		if_resolution = {
 			min_width = 3440
 			
-			position = { x = 516 y = 74 }
+			position = { x = @widescreen_x y = @widescreen_y }
 			orientation = upper_left
 			origo = upper_left
 		}

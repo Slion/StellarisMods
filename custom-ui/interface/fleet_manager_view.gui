@@ -1,3 +1,7 @@
+@widescreen_x = 516
+@widescreen_y = 104
+
+
 guiTypes = {
 	@FLEET_MANAGER_AVAILABLE_SHIP_DESIGN_ENTITY_WIDTH = 337
 	@FLEET_MANAGER_AVAILABLE_SHIP_DESIGN_ENTITY_ITEM_WIDTH = 325
@@ -25,7 +29,7 @@ guiTypes = {
 		# Widescreen mode
 		if_resolution = {
 			min_width = 3440			
-			position = { x = 516 y = 74 }
+			position = { x = @widescreen_x y = @widescreen_y }
 		}
 
 		background = {

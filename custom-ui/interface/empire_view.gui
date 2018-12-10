@@ -6,6 +6,9 @@
 @resource_h = 50
 @resource_value_y = 30
 
+@widescreen_x = 516
+@widescreen_y = 104
+
 guiTypes = {
 	containerWindowType = {
 		name = "empire_view"
@@ -23,7 +26,7 @@ guiTypes = {
 		# Widescreen mode
 		if_resolution = {
 			min_width = 3440			
-			position = { x = 516 y = 74 }
+			position = { x = @widescreen_x y = @widescreen_y }
 		}
 
 		background = {

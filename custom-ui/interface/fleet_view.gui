@@ -13,9 +13,9 @@ guiTypes = {
 	containerWindowType = {
 		
 		@offset_x = 516
-		@offset_y = 78
-		@offset_y_plus_39 = 117
-		@offset_y_minus_4 = 74
+		@offset_y = 108
+		@offset_y_plus_39 = 147
+		@offset_y_minus_4 = 104
 
 		name = "fleet_view"
 		# width should be 475 + @offset_x

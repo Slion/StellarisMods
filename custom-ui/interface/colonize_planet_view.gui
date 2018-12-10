@@ -1,5 +1,10 @@
 @tab_height = -45
 
+@widescreen_x = 516
+@widescreen_y = 104
+
+
+
 guiTypes = {
 
 	@SOURCE_W = 483
@@ -268,7 +273,7 @@ guiTypes = {
 			orientation = upper_left		
 			origo = upper_left
 			# Putting it bellow the expansion planner, that won't work on 2560x1080 if ever we decide to support it
-			position = { x = 516 y = 672 }
+			position = { x = @widescreen_x y = 672 }
 		}
 
 		background = {

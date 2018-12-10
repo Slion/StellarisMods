@@ -1,3 +1,6 @@
+@widescreen_x = 516
+@widescreen_y = 104
+
 guiTypes = {
 	containerWindowType = {
 		@claims_view_width = 380
@@ -15,7 +18,7 @@ guiTypes = {
 		if_resolution = {
 			min_width = 3440
 			# Need to be beyond the extended side bar
-			position = { x = 0 y = 713 } # Changed in code to center the window vertically			
+			position = { x = @widescreen_x y = @widescreen_y } # Changed in code to center the window vertically			
 		}
 
 		background = {
