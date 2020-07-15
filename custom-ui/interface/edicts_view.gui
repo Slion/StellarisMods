@@ -6,7 +6,7 @@ guiTypes = {
 		name = "edicts_view"
 		size = { width = 595 height = 640 } 
 		orientation = upper_left
-		moveable = no
+		moveable = yes
 		clipping = no
 		show_sound = "interface"
 		
@@ -30,7 +30,7 @@ guiTypes = {
 		iconType = {
 			name = "hex_bg"
 			spriteType = "GFX_hex_bg"
-			position = { x = 29 y = -12 }
+			position = { x = 5 y = -12 }
 			alwaysTransparent = yes
 		}
 		
@@ -38,18 +38,80 @@ guiTypes = {
 			name = "edicts_header_line"
 			quadTextureSprite = "GFX_line"
 			position = { x = 6 y = 21 }
-			alwaystransparent = yes
+			alwaysTransparent = yes
 		}
 		
 		instantTextBoxType = {
 			name = "edicts_header"
 			font = "malgun_goth_24"
 			text = "EDICTS"
-			position = { x = 64 y = 5 }
+			position = { x = 35 y = 5 }
 			maxWidth = 300
 			maxHeight = 20
 			fixedSize = yes
 			format = left
+		}
+
+		containerWindowType = {
+			name = "background_edict_cap"
+			position = { x = -218 y = 7 }
+			size = { width = 70 height = 48 }
+			orientation = upper_right
+
+			background = {
+				name = "background"
+				spriteType = "GFX_tiles_dark_area_cut_8"
+			}
+		}
+
+		containerWindowType = {
+			name = "background_empire_sprawl"
+			position = { x = -140 y = 7 }
+			size = { width = 70 height = 48 }
+			orientation = upper_right
+
+			background = {
+				name = "background"
+				spriteType = "GFX_tiles_dark_area_cut_8"
+			}
+		}
+			
+
+		iconType = {
+			name = "edict_cap_icon"
+			quadTextureSprite = "GFX_edict_capacity"
+			position = { x = 398 y = 12 }
+			alwaysTransparent = yes
+			scale = .9
+		}
+		
+		instantTextBoxType = {
+			name = "edict_capacity"
+			font = "cg_16b"
+			text = "EDICT_CAP"
+			position = { x = 362 y = 36 }
+			maxWidth = 100
+			maxHeight = 20
+			fixedSize = yes
+			format = center
+		}
+
+		iconType = {
+			name = "edict_sprawl_icon"
+			quadTextureSprite = "GFX_empire_sprawl_icon"
+			position = { x = 476 y = 10 }
+			alwaysTransparent = yes
+		}
+		
+		instantTextBoxType = {
+			name = "edict_sprawl_impact"
+			font = "cg_16b"
+			text = "SPRAWL_IMPACT"
+			position = { x = 440 y = 36 }
+			maxWidth = 100
+			maxHeight = 20
+			fixedSize = yes
+			format = center
 		}
 		
 		buttonType = {
@@ -65,7 +127,7 @@ guiTypes = {
 		containerWindowType = {
 			name = "edict_list_window"
 			position = { x=6 y=55 }
-			size = { width = 583 height = 565 }
+			size = { width = 583 height = 579 }
 			dontRender = ""
         
 			background = {
@@ -77,7 +139,7 @@ guiTypes = {
 				name = "edict_list"
 				position = { x = 10 y = 8 }
 				backGround=""
-				size = { x = 550 y=547 }
+				size = { x = 550 y=561 }
 				spacing = 1
 				scrollbartype = "standardlistbox_slider"
 				borderSize = { x = 0 y = 0 }
@@ -112,10 +174,18 @@ guiTypes = {
 		instantTextBoxType = {
 			name = "edicts_name"
 			font = "cg_16b"
-			position = { x = 34 y = 9 }
+			position = { x = 64 y = 9 }
 			maxWidth = 300
 			format = left
 			alwaysTransparent = yes
+		}
+
+		iconType = {
+			name = "type_icon"
+			spriteType = "GFX_edict_type_time"
+			position = { x = 45 y = 19 }
+			orientation = "LEFT"
+			centerPosition = yes
 		}
 
 		instantTextBoxType = {
@@ -131,7 +201,7 @@ guiTypes = {
 		instantTextBoxType = {
 			name = "active"
 			font = "cg_16b"
-			position = { x = 500 y = 10 }
+			position = { x = 440 y = 10 }
 			maxWidth = 100
 			fixedSize = yes
 			format = left
@@ -144,6 +214,7 @@ guiTypes = {
 			quadTextureSprite = "GFX_checkbox_20_20_01"
 			position = { x = 2 y = 2  }
 			oversound = "no_sound"
+			clicksound = "select_click"
 		}
 	}
 	

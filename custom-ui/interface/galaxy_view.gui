@@ -40,7 +40,7 @@ guiTypes = {
 		iconType = {
 			name = "hex_bg"
 			spriteType = "GFX_hex_bg"
-			position = { x = 30 y = -12 }
+			position = { x = 5 y = -12 }
 			alwaysTransparent = yes
 		}
 
@@ -53,7 +53,7 @@ guiTypes = {
 		instantTextBoxType={
 			name = "header"
 			font = "malgun_goth_24"
-			position = { x = 65 y = 4 }
+			position = { x = 35 y = 5 }
 			text = "topbar_button_contacts_name"
 			format = left
 		}
@@ -450,6 +450,7 @@ guiTypes = {
 				name = "filter_checkbox_other"
 				position = { x = 552 y = 10 }
 				quadTextureSprite = "GFX_checkbox_20_20_01"
+				clicksound = select_click
 			}
 
 			instantTextBoxType = {
@@ -469,6 +470,7 @@ guiTypes = {
 				name = "filter_checkbox_primitive"
 				position = { x = 722 y = 10 }
 				quadTextureSprite = "GFX_checkbox_20_20_01"
+				clicksound = select_click
 			}
 
 			instantTextBoxType = {
@@ -488,6 +490,7 @@ guiTypes = {
 				name = "filter_checkbox_fallen_empire"
 				position = { x = 892 y = 10 }
 				quadTextureSprite = "GFX_checkbox_20_20_01"
+				clicksound = select_click
 			}
 
 			instantTextBoxType = {
@@ -502,11 +505,14 @@ guiTypes = {
 				text_color_code = "H"
 				alwaystransparent = yes
 			}
+
 			checkboxType = {
 				name = "filter_checkbox_non_player"
 				position = { x = 1062 y = 10 }
 				quadTextureSprite = "GFX_checkbox_20_20_01"
+				clicksound = select_click
 			}
+
 			instantTextBoxType = {
 				name = "filter_label_non_player"
 				font = "cg_16b"
@@ -526,7 +532,7 @@ guiTypes = {
 				font = "cg_16b"
 				spriteType = "GFX_galactic_object_button"
 				buttonText = "GALAXY_VIEW_EMPIRE_NAME"
-				position = { x = 347 y = 40 }
+				position = { x = 345 y = 40 }
 				pdx_tooltip = "GALAXY_VIEW_SORT_NAME"
 			}
 
@@ -539,9 +545,10 @@ guiTypes = {
 
 			iconType ={
 				name ="their_opinion_icon"
-				spriteType = "GFX_their_opinion"
-				position = { x = 636 y = 45 }
+				spriteType = "GFX_diplomacy_opinion"
+				position = { x = 636 y = 47 }
 				alwaystransparent = yes
+				scale = .85
 			}
 			
 			buttonType={
@@ -550,7 +557,7 @@ guiTypes = {
 				#spriteType = "GFX_galactic_object_button"
 				spriteType = "GFX_button_164_24"
 				buttonText = "GALAXY_VIEW_EMPIRE_STATUS"
-				position = { x = 656 y = 33 }
+				position = { x = 658 y = 33 }
 				pdx_tooltip = "GALAXY_VIEW_SORT_DIPLOMACY"
 			}
 
@@ -559,7 +566,7 @@ guiTypes = {
 				font = "cg_16b"
 				spriteType = "GFX_button_150_24"
 				buttonText = "RELATIVE_POWER"
-				position = { x = 823 y = @sort_button_height }
+				position = { x = 827 y = @sort_button_height }
 				pdx_tooltip = "GALAXY_VIEW_SORT_POWER"
 			}
 
@@ -568,7 +575,7 @@ guiTypes = {
 				font = "cg_16b"
 				spriteType = "GFX_button_150_24"
 				buttonText = "GALAXY_VIEW_EMPIRE_ALLIANCE_FEDERATION"
-				position = { x = 976 y = @sort_button_height }
+				position = { x = 982 y = @sort_button_height }
 				pdx_tooltip = "GALAXY_VIEW_SORT_ALLIANCE_OR_FEDERATION"
 			}
 
@@ -577,7 +584,7 @@ guiTypes = {
 				font = "cg_16b"
 				spriteType = "GFX_button_95_24"
 				buttonText = "GALAXY_VIEW_EMPIRE_WAR_STATUS"
-				position = { x = 1128 y = @sort_button_height }
+				position = { x = 1137 y = @sort_button_height }
 				pdx_tooltip = "GALAXY_VIEW_SORT_WAR_STATUS"
 			}
 
@@ -603,6 +610,34 @@ guiTypes = {
 					borderSize = { x = 0 y = 0 }
 				}
 			}
+		}
+
+		# tabs ----------------------------------------------
+		@tabheight = 1 
+		
+		buttonType = {
+			name = "tab_galaxy"
+			quadTextureSprite = "GFX_tab_1_inactive"
+			position = { x= -20 y = @tabheight }
+			font = "cg_16b"
+			buttonText = "topbar_button_contacts_name"
+			buttonFont = "cg_16b"
+			shortcut = "z"
+			clicksound = "tab_click"
+			Orientation = "LOWER_LEFT"
+			oversound = no_sound
+		}
+		buttonType = {
+			name = "tab_galaxy_active"
+			quadTextureSprite = "GFX_tab_1_active"
+			position = { x= -20 y = @tabheight }
+			font = "cg_16b"
+			buttonText = "topbar_button_contacts_name"
+			buttonFont = "cg_16b"
+			clicksound = "tab_click"
+			shortcut = "z"
+			Orientation = "LOWER_LEFT"
+			oversound = no_sound
 		}
 	}
 

@@ -188,7 +188,7 @@ guiTypes = {
 				font = "cg_16b"
 				text = "5"
 				position = { x = -125 y = 62 }
-				maxWidth = 100
+				maxWidth = 115
 				maxHeight = 20
 				fixedSize = yes
 				Orientation = "UPPER_RIGHT"
@@ -532,7 +532,7 @@ guiTypes = {
 
 			background = {
 				name = "background"
-				spriteType = "GFX_tiles_dark_area_cut_8"
+				spriteType = "GFX_tiles_dark_area_cut_8_hover"
 				clicksound = "tab_click"
 			}
 		}
@@ -612,12 +612,12 @@ guiTypes = {
 			alwaystransparent = yes
 		}
 
-		buttonType = {
-			name = "value_slot_2"
-			spriteType = "GFX_value_slot_short"
-			position = { x = 277 y = 50 }
-			alwaystransparent = yes
-		}
+		#buttonType = {
+		#	name = "value_slot_2"
+		#	spriteType = "GFX_value_slot_short"
+		#	position = { x = 277 y = 50 }
+		#	alwaystransparent = yes
+		#}
 
 		iconType = {
 			name ="skill"
@@ -633,25 +633,25 @@ guiTypes = {
 			alwaystransparent = yes
 		}
 
-		instantTextBoxType = {
-			name = "risk"
-			font = "cg_16b"
-			text = ""
-			position = { x = -146 y = 57 }
-			maxWidth = 90
-			maxHeight = 20
-			fixedSize = yes
-			format = right
-			orientation = "UPPER_RIGHT"
-			text_color_code = "R"
-		}
+		#instantTextBoxType = {
+		#	name = "risk"
+		#	font = "cg_16b"
+		#	text = ""
+		#	position = { x = -146 y = 57 }
+		#	maxWidth = 90
+		#	maxHeight = 20
+		#	fixedSize = yes
+		#	format = right
+		#	orientation = "UPPER_RIGHT"
+		#	text_color_code = "R"
+		#}
 
-		iconType = {
-			name = "risk_icon"
-			spriteType = "GFX_failure_risk_icon"
-			position = { x = 278 y = 51 }
-			alwaystransparent = yes
-		}
+		#iconType = {
+		#	name = "risk_icon"
+		#	spriteType = "GFX_failure_risk_icon"
+		#	position = { x = 278 y = 51 }
+		#	alwaystransparent = yes
+		#}
 
 		buttonType = {
 			name = "focus_on"

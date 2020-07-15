@@ -29,7 +29,7 @@ guiTypes = {
 		iconType = {
 			name = "hex_bg"
 			spriteType = "GFX_hex_bg"
-			position = { x = 30 y = -12 }
+			position = { x = 5 y = -12 }
 			alwaysTransparent = yes
 		}
 		
@@ -44,7 +44,7 @@ guiTypes = {
 			name = "leaders_header"
 			font = "malgun_goth_24"
 			text = "topbar_button_leaders_name"
-			position = { x = 65 y = 5 }
+			position = { x = 35 y = 5 }
 			maxWidth = 300
 			maxHeight = 20
 			fixedSize = yes
@@ -54,7 +54,7 @@ guiTypes = {
 		buttonType = {
 			name = "close"
 			quadTextureSprite = "GFX_close"
-			position = { x = -41 y = 13 }
+			position = { x = -45 y = 16 }
 			orientation = upper_right
 			shortcut = "ESCAPE"
 			clicksound = "back_click"
@@ -198,11 +198,10 @@ guiTypes = {
 			alwaysTransparent = yes
 		}
         
-        
 		containerWindowType = {
 			name = "leader_frame_box2"
-			size = { width = 1252 height = 516 }
-			position = { x = 10 y = 113 }
+			size = { width = 1250 height = 516 }
+			position = { x = 11 y = 113 }
         
 			background = {
 				name = "leader_frame2"
@@ -225,7 +224,7 @@ guiTypes = {
         
 		containerWindowType = {
 			name = "leader_frame_area_2"
-			size = { width = 313 height = 516 }
+			size = { width = 312 height = 516 }
 			position = { x = 949 y = 113 }
         
 			background = {

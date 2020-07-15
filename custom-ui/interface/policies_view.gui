@@ -30,7 +30,7 @@ guiTypes = {
 		iconType = {
 			name = "hex_bg"
 			spriteType = "GFX_hex_bg"
-			position = { x = 29 y = -12 }
+			position = { x = 5 y = -12 }
 			alwaysTransparent = yes
 		}
 		
@@ -45,11 +45,56 @@ guiTypes = {
 			name = "policies_header"
 			font = "malgun_goth_24"
 			text = "POLICIES"
-			position = { x = 64 y = 5 }
+			position = { x = 35 y = 5 }
 			maxWidth = 300
 			maxHeight = 20
 			fixedSize = yes
 			format = left
+			alwaysTransparent = yes
+		}
+
+		containerWindowType = {
+			name = "in_breach_container"
+			position = { x = 325 y = 5 }
+			size = { width = 195 height = 50 }
+			moveable = no
+			clipping = no
+
+			#background = {
+			#	name = "background"
+			#	spriteType = "GFX_dark_area_cut"
+			#}
+
+			background = {
+				name = "background"
+				spriteType = "GFX_tiles_frame_light"
+			}
+
+			
+			iconType = {
+				name = "red_hex"
+				alwaysTransparent = yes
+				position = { x = -18 y = -8 }
+				quadTextureSprite = "GFX_in_breach_hex_bg"
+			}
+
+			instantTextBoxType = {
+				name = "in_breach_header"
+				font = "cg_16b"
+				text = "IN_BREACH"
+				text_color_code = "R"
+				position = { x = -130 y = 5 }
+				format = right
+				maxWidth = 120
+				maxHeight = 20
+				alwaysTransparent = yes
+			}
+
+			OverlappingElementsBoxType = {
+				name = "in_breach_box"	
+				position = { x = -5 y = -5 }
+				size = { x = 190 y = 45 }
+			}
 		}
 		
 		buttonType = {
@@ -65,7 +110,7 @@ guiTypes = {
 		containerWindowType = {
 			name = "policy_list_window"
 			position = { x = 6 y = 55 }
-			size = { width = 583 height = 565 }
+			size = { width = 583 height = 579 }
 			moveable = no
         
 			background = {
@@ -77,7 +122,7 @@ guiTypes = {
 				name = "policy_list"
 				position = { x = 10 y = 10 }
 				backGround=""
-				size = { x = 550 y=547 }
+				size = { x = 550 y=557 }
 				spacing = 1
 				scrollbartype = "standardlistbox_slider"
 				borderSize = { x = 0 y = 0 }
@@ -183,5 +228,17 @@ guiTypes = {
 			frame = 1
 			scale = 0.8
 		}
+	}
+
+	containerWindowType = {
+		name = "in_breach_entry"
+		position = { x = 0 y = 0 }
+		size = { width = 25 height = 25 }
+
+		background = {
+			name = "background_button"
+			quadTextureSprite = "GFX_message_event_ruler"
+		}
+
 	}
 }

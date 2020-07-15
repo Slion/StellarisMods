@@ -263,8 +263,8 @@ guiTypes = {
 			
 			containerWindowType = {
 				name = "empire_size_group"
-				size = { width = 50 height = 35 }
-				position = { x = 10 y = 0 }
+				size = { width = 100 height = 35 }
+				position = { x = 0 y = 0 }
 
 				background = {
 					name = "background"
@@ -273,8 +273,8 @@ guiTypes = {
 
 				iconType = {
 					name = "icon"
-					spriteType = "GFX_sector_cap_icon"
-					position = { x = 15 y = 0 }
+					spriteType = "GFX_empire_sprawl_icon"
+					position = { x = 35 y = 0 }
 					scale = 0.8
 					tooltip_mode_enabled = yes
 					alwaysTransparent = yes
@@ -283,19 +283,19 @@ guiTypes = {
 				instantTextBoxType={
 					name = "amount"
 					font = "cg_16b"
-					position = { x = 0 y = 16 }
-					maxWidth = 50
+					position = { x = -15 y = 16 }
+					maxWidth = 120
 					maxHeight = 16
 					text = "250"
 					format = center
 					alwaysTransparent = yes
 				}
 			}
-			
+
 			containerWindowType = {
-				name = "system_group"
-				size = { width = 50 height = 35 }
-				position = { x = 50 y = 0 }
+				name = "envoys_group"
+				size = { width = 100 height = 35 }
+				position = { x = 80 y = 0 }
 
 				background = {
 					name = "background"
@@ -304,9 +304,9 @@ guiTypes = {
 
 				iconType = {
 					name = "icon"
-					spriteType = "GFX_text_systems"
-					scale = 0.9
-					position = { x = 18 y = 3 }
+					spriteType = "GFX_envoy_icon"
+					position = { x = 15 y = 0 }
+					scale = 0.7
 					tooltip_mode_enabled = yes
 					alwaysTransparent = yes
 				}
@@ -314,40 +314,10 @@ guiTypes = {
 				instantTextBoxType={
 					name = "amount"
 					font = "cg_16b"
-					position = { x = 0 y = 16 }
-					maxWidth = 50
+					position = { x = -35 y = 16 }
+					maxWidth = 120
 					maxHeight = 16
-					text = "0 / 0"
-					format = center
-					alwaysTransparent = yes
-				}
-			}			
-
-			containerWindowType = {
-				name = "colony_group"
-				size = { width = 50 height = 35 }
-				position = { x = 90 y = 0 }
-
-				background = {
-					name = "background"
-					spriteType = "GFX_invisible"
-				}
-
-				iconType = {
-					name = "icon"
-					spriteType = "GFX_system_cap_icon"
-					position = { x = 17 y = 1 }
-					tooltip_mode_enabled = yes
-					alwaysTransparent = yes
-				}
-
-				instantTextBoxType={
-					name = "amount"
-					font = "cg_16b"
-					position = { x = 0 y = 16 }
-					maxWidth = 50
-					maxHeight = 16
-					text = "0 / 0"
+					text = "250"
 					format = center
 					alwaysTransparent = yes
 				}
@@ -416,7 +386,7 @@ guiTypes = {
 
 			containerWindowType = {
 				name = "navy_group"
-				size = { width = 64 height = 35 }
+				size = { width = 84 height = 35 }
 				position = { x = 250 y = 0 }
 
 				background = {
@@ -427,7 +397,7 @@ guiTypes = {
 				iconType = {
 					name = "icon"
 					spriteType = "GFX_fleet_size_icon"
-					position = { x = 20 y = 2 }
+					position = { x = 30 y = 2 }
 					tooltip_mode_enabled = yes
 					alwaysTransparent = yes
 				}
@@ -436,7 +406,7 @@ guiTypes = {
 					name = "amount"
 					font = "cg_16b"
 					position = { x = 2 y = 16 }
-					maxWidth = 60
+					maxWidth = 80
 					maxHeight = 16
 					text = "0 / 0"
 					format = center
@@ -719,7 +689,7 @@ guiTypes = {
 			dropDownBoxType = {
 				name = "tb_others_group"
 				size = { width = 80 height = 35 }
-				position = { x = 620 y = 0 }
+				position = { x = 615 y = 0 }
 
 				background = {
 					name = "background"
@@ -1131,9 +1101,15 @@ guiTypes = {
 			position = { x = 1 y = 0 }					
 		}
 			
-		background = {
-			name = "navbar_bg"
-			spriteType = "GFX_navbar_bg"
+		containerWindowType = {
+			name = "background"
+			size = { width = 250 height = 640 }
+			position = { x = 5 y = 5 }
+			
+			background = {
+				name = "navbar_bg"
+				spriteType = "GFX_navbar_bg"
+			}
 		}
 
 		buttonType = {

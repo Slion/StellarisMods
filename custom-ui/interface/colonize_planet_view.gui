@@ -273,7 +273,7 @@ guiTypes = {
 			orientation = upper_left		
 			origo = upper_left
 			# Putting it bellow the expansion planner, that won't work on 2560x1080 if ever we decide to support it
-			position = { x = @widescreen_x y = 672 }
+			position = { x = 1369 y = 113 }
 		}
 
 		background = {
@@ -391,7 +391,7 @@ guiTypes = {
 
 			iconType = {
 				name = "planet_class_icon"
-				position = { x = 186 y = 3 }
+				position = { x = 190 y = 3 }
 				spriteType = "GFX_planet_type"
 				frame = 1
 				scale = 0.75
@@ -402,7 +402,7 @@ guiTypes = {
 				name = "planet_class"
 				font = "cg_16b"
 				text = "planet_class"
-				position = { x = 10 y = 10 }
+				position = { x = 14 y = 10 }
 				maxWidth = 130
 				maxHeight = 30
 				fixedSize = yes
@@ -427,6 +427,18 @@ guiTypes = {
 				fixedSize = yes
 				format = center
 			}
+			
+			instantTextBoxType={
+				name = "habitability"
+				font = "cg_16b"
+				text = "10%"
+				position = { x = 139 y = 10 }
+				maxWidth = 48
+				maxHeight = 20
+				fixedSize = yes
+				format = right
+				alwaysTransparent = yes
+			}
 		}
 
 		overlappingElementsBoxType = {
@@ -436,52 +448,101 @@ guiTypes = {
 			size = { x=220 y=34 }
 			orientation = upper_left
 		}
-
+		
 		containerWindowType = {
-			name = "districts_title"
-			size = { width = 350 height = 220 }
-			position = { x = 520 y = 230 }
-
-			iconType = {
-				name = "title_hex"
-				quadTextureSprite = "GFX_hex_bg"
-				position = { x = -11 y = -7 }
+			name = "districts_window"
+			size = { width = 280 height = 240 }
+			position = { x = 525 y = 240 }
+			
+				background = {
+				position = { x = 0 y = 0 }
+				name = "districts_window_background"
+				spriteType = "GFX_tiles_frame"
 			}
-
-			iconType = {
-				name = "title_line"
-				quadTextureSprite = "GFX_line_short"
-				position = { x = 14 y = 30 }
+			
+			containerWindowType = {
+				name = "planet_num_districts"
+				size = { width = 70 height = 45 }
+				position = { x = 198 y = 2 }
+            
+				
+				background = {
+					name = "district_num_bg"
+					quadTextureSprite = "GFX_planet_bg_tile_frame"
+				}
+            
+				iconType = {
+					name = "num_districts_icon"
+					spriteType = "GFX_district_small"
+					position = { x = 10 y = 10 }
+					tooltip_mode_enabled = yes
+				}
+            
+				instantTextBoxType={
+					name = "planet_districts_amount"
+					font = "cg_16b"
+					position = { x = 30 y = 15 }
+					text = "10"
+					maxWidth = 30
+					maxHeight = 40
+					fixedSize = yes
+					format = center
+				}
 			}
-
-			instantTextBoxType = {
-				name = "districts_text"
-				font = "malgun_goth_24"
-				position = { x = 21 y = 12 }
-				text = "DISTRICTS_TITLE"
-				maxWidth = 320
-				maxHeight = 20
-				fixedSize = yes
-				format = left
-				orientation = upper_left
+            
+			# Districts
+			gridBoxType = {
+				name = "districts_grid_box"
+				position = { x = 4 y = 44 }
+				size = { width = 270 height = 200 }
+				format = "UPPER_LEFT"
+				slotsize = { width = 64 height = 140 }
+				add_horizontal = yes
+				max_slots_horizontal = 4
+				max_slots_vertical = 1
 			}
-		}	
-
-		# Districts
-		gridBoxType = {
-			name = "districts_grid_box"
-			position = { x = 530 y = 260 }
-			size = { width = 400 height = 200 }
-			format = "UPPER_LEFT"
-			slotsize = { width = 60 height = 132 }
-			add_horizontal = yes
-			max_slots_horizontal = 4
-			max_slots_vertical = 1
+            
+			# Available District Cubes Container
+			containerWindowType = {
+				name = "available_districts_window"
+				size = { width = 100 height = 45 }
+				position = { x = 105 y = 0 }
+            
+				gridBoxType = {
+					name = "available_districts_grid_box"
+					size = { width = 100 height = 20 }
+					position = { x = -5 y = 16 }
+					format = "UPPER_RIGHT"
+					slotsize = { width = 10 height = 10 }
+					max_slots_horizontal = 11
+					max_slots_vertical = 2
+					add_horizontal = no
+				}
+			}
+            
+			containerWindowType = {
+				name = "districts_title"
+				size = { width = 350 height = 220 }
+				position = { x = 10 y = 0 }
+            
+				instantTextBoxType = {
+					name = "districts_text"
+					font = "malgun_goth_24"
+					position = { x = 6 y = 12 }
+					text = "DISTRICTS_TITLE"
+					maxWidth = 320
+					maxHeight = 20
+					fixedSize = yes
+					format = left
+					orientation = upper_left
+					alwaysTransparent = yes
+				}		
+			}
 		}
 
 		containerWindowType = {
 			name = "deposits_window"
-			position = { x = 720 y = 230 }
+			position = { x = 740 y = 230 }
 
 			instantTextBoxType = {
 				name = "header"
@@ -544,46 +605,31 @@ guiTypes = {
 		position = { x=10 y=12 }
 		size = { width = 56 height = 135 }
 		moveable = no
-		
-		background = {
-			name = "background"
-			spriteType = "GFX_dark_area_cut"
-		}
-		
-		iconType = {
-			name = "district_icon"
-			spriteType = "GFX_spaceport_module_used_slot"
-			position = { x=-3 y=-1 }
-			alwaysTransparent = yes
-		}	
 
 		iconType = {
-			name = "district_button"
+			name = "district_icon"
 			spriteType = "GFX_district_unknown"
-			position = { x=1 y=3 }
+			position = { x=5 y=5 }
 			scale = 0.65
 		}
 		
+		instantTextBoxType={
+			name = "not_surveyed"
+			font = "malgun_goth_24"
+			text = "UNKNOWN_SHORT"
+			position = { x = 20 y = 60 }
+			maxWidth = 20
+			maxHeight = 20
+			fixedSize = yes
+			format = left
+		}	
+
 		containerWindowType = {
 			name = "district_box"
 			size = { width = 52 height = 82 }
-			position = { x = 0 y = 52 }
+			position = { x = 3 y = 54 }
 			
-			# residential districts
-					
-			instantTextBoxType={
-				name = "num_districts_text"
-				font = "cg_16b"
-				position = { x = 0 y = 10 }
-				text = "10"
-				maxWidth = 52
-				maxHeight = 20
-				fixedSize = yes
-				format = center
-			}
-
 			# non-residential districts
-
 			gridBoxType = {
 				name = "district_box_grid"
 				size = { width = 65 height = 45 }
@@ -594,7 +640,31 @@ guiTypes = {
 				max_slots_vertical = 5
 				add_horizontal = yes
 			}
+		}
 
+		# Passed 15 Cubes, Number Box is shown. Replaces the bottom 6 cubes.
+		containerWindowType = {
+			name = "planet_district_cap_container"
+			size = { width = 44 height = 28 }
+			position = { x = 5 y = 104 }			
+
+			iconType = {
+				name = "cap_background"
+				spriteType = "GFX_district_any_big"
+				position = {x = 3 y = 0 }
+				scale = 1
+			}
+	
+			instantTextBoxType = {
+				name = "num_districts_text"
+				font = "cg_16b"
+				position = { x = -2 y = 6 }
+				text = "10"
+				maxWidth = 52
+				maxHeight = 20
+				fixedSize = yes
+				format = center
+			}
 		}
 	}	
 	

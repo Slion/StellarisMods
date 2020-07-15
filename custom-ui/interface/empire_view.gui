@@ -37,7 +37,7 @@ guiTypes = {
 		iconType = {
 			name = "hex_bg"
 			spriteType = "GFX_hex_bg"
-			position = { x = 30 y = -12 }
+			position = { x = 5 y = -12 }
 			alwaysTransparent = yes
 		}
 
@@ -61,16 +61,143 @@ guiTypes = {
 			name = "heading"
 			font = "malgun_goth_24"
 			text = "PLANET_LIST"
-			position = { x = 65 y = 5 }
+			position = { x = 35 y = 5 }
 			maxWidth = 1035
 			maxHeight = 20
 			fixedSize = yes
 			alwaysTransparent = yes
 		}
+		
+			containerWindowType = {
+				name = "empire_list"
+				position = { x=11 y=140 }
+				size = { width= 1250 height= 489 }
+
+				background = {
+					name = "area51"
+					spriteType = "GFX_tiles_dark_area_cut_8"
+				}
+			}
+
+		containerWindowType = {
+			name = "shared_stockpile"
+			position = { x = 605 y = 5 }
+			size = { width = 100%% height = 100% }
+
+			@labelWindowWidth = 142
+			@labelWindowHeight = 28
+			@labelPosY = 15
+
+			containerWindowType = {
+				name = "shared_stockpile_title"
+				size = { width = @labelWindowWidth height = @labelWindowHeight }
+				position = { x = 170 y = @labelPosY }
+
+				background = {
+					name = "bg"
+					spriteType = "GFX_tiles_dark_area_cut_8"
+				}
+
+				instantTextBoxType = {
+					name = "shared_stockpile_title"
+					font = "cg_16b"
+					position = { x = 0 y = 5 }
+					maxWidth = @labelWindowWidth
+					maxHeight = @labelWindowHeight
+					fixedSize = yes
+					text = "SHARED_SECTOR_RESOURCES"
+					format = center
+					text_color_code = "H"
+					alwaysTransparent = no
+				}
+			}
+
+			containerWindowType = {
+				name = "shared_stockpile_monthly"
+				size = { width = @labelWindowWidth height = @labelWindowHeight }
+				position = { x = 320 y = @labelPosY }
+
+				background = {
+					name = "bg"
+					spriteType = "GFX_tiles_dark_area_cut_8"
+				}
+
+				instantTextBoxType = {
+					name = "shared_stockpile_monthly"
+					font = "cg_16b"
+					position = { x = 0 y = 5 }
+					maxWidth = @labelWindowWidth
+					maxHeight = @labelWindowHeight
+					fixedSize = yes
+					text = "SHARED_SECTOR_MONTHLY"
+					format = center
+					text_color_code = "H"
+					alwaysTransparent = no
+				}
+			}
+
+			containerWindowType = {
+				name = "shared_stockpile_stockpile"
+				size = { width = @labelWindowWidth height = @labelWindowHeight }
+				position = { x = 470 y = @labelPosY }
+
+				background = {
+					name = "bg"
+					spriteType = "GFX_tiles_dark_area_cut_8"
+				}
+
+				instantTextBoxType = {
+					name = "shared_stockpile_stockpile"
+					font = "cg_16b"
+					position = { x = 0 y = 5 }
+					maxWidth = @labelWindowWidth
+					maxHeight = @labelWindowHeight
+					fixedSize = yes
+					text = "SHARED_SECTOR_STOCKPILE"
+					format = center
+					text_color_code = "H"
+					alwaysTransparent = no
+				}
+			}
+
+			buttonType = {
+				name = "shared_transfer_resources"
+				quadTextureSprite = "GFX_standard_button_142_34_button"
+				position = { x = 460 y = 42 }
+				pdx_tooltip = "SHARED_SECTOR_STOCKPILE_DESC"
+				font = "cg_16b"
+			}
+
+			instantTextBoxType = {
+				name = "amount"
+				font = "cg_16b"
+				position = { x = 472 y = 62 }
+				maxWidth = 140
+				maxHeight = 34
+				fixedSize = yes
+				format = center
+				text_color_code = "E"
+				alwaysTransparent = yes
+			}
+
+			containerWindowType = {
+				name = "monthly_resources_transfer"
+				size = { width = 100 height = 100%% }
+				position = { x = 340 y = 48 }
+
+				gridBoxType = {
+					name = "resources_grid"
+					slotSize = { width = 100 height = 25 }
+					format = "UPPER_LEFT"
+					max_slots_horizontal = 1
+					add_horizontal = no
+				}
+			}
+		}
 
 		containerWindowType = {
 			name = "planets_window"
-			position = { x = 0 y = 0 }
+			position = { x = 0 y = 10 }
 
 			@sort_button_height = 85
 
@@ -79,7 +206,7 @@ guiTypes = {
 				font = "cg_16b"
 				spriteType = "GFX_button_95_24"
 				buttonText = "TYPE"
-				position = { x = 3 y = @sort_button_height }
+				position = { x = 8 y = @sort_button_height }
 				orientation = UPPER_LEFT
 				pdx_tooltip = "SPECIES_VIEW_SORT_TYPE"
 				oversound = mouse_over
@@ -90,7 +217,7 @@ guiTypes = {
 				font = "cg_16b"
 				spriteType = "GFX_button_116_24"
 				buttonText = "NAME"
-				position = { x = 103 y = @sort_button_height }
+				position = { x = 108 y = @sort_button_height }
 				orientation = UPPER_LEFT
 				pdx_tooltip = "SORT_BY_NAME"
 				oversound = mouse_over
@@ -101,7 +228,7 @@ guiTypes = {
 				font = "cg_16b"
 				spriteType = "GFX_galactic_object_button"
 				buttonText = "OUTPUT"
-				position = { x = 224 y = 92 }
+				position = { x = 229 y = 92 }
 				orientation = UPPER_LEFT
 				pdx_tooltip = "SORT_BY_OUTPUT"
 				oversound = mouse_over
@@ -112,7 +239,7 @@ guiTypes = {
 				font = "cg_16b"
 				spriteType = "GFX_button_116_24"
 				buttonText = "governor"
-				position = { x = 497 y = @sort_button_height }
+				position = { x = 502 y = @sort_button_height }
 				orientation = UPPER_LEFT
 				pdx_tooltip = "SORT_BY_GOVERNOR"
 				oversound = mouse_over
@@ -123,7 +250,7 @@ guiTypes = {
 				font = "cg_16b"
 				spriteType = "GFX_event_button_452"
 				buttonText = "POPS"
-				position = { x = 620 y = 93 }
+				position = { x = 623 y = 93 }
 				orientation = UPPER_LEFT
 				pdx_tooltip = "SORT_BY_POP"
 				oversound = mouse_over
@@ -143,7 +270,7 @@ guiTypes = {
 			smoothListboxType = {
 				id = "list"
 				name = "list"
-				position = { x = 16 y = 132 }
+				position = { x = 20 y = 138 }
 				size = { x= 1230 y = 495 }
 				scrollbartype = "standardlistbox_slider"
 				spacing = 4
@@ -164,7 +291,6 @@ guiTypes = {
 		background = {
 			name = "planet_list_leaders_entry_background"
 			quadTextureSprite = "GFX_tiles_frame_light"
-			clicksound = assign_leader_click
 			position = { x = 0 y = 0 }
 		}
 
@@ -297,7 +423,7 @@ guiTypes = {
 			font = "cg_16b"
 			text = "STATUS"
 			position = { x = 13 y = 92 }
-			maxWidth = 180
+			maxWidth = 140
 			maxHeight = 40
 			fixedSize = yes
 			format = left
@@ -751,25 +877,25 @@ guiTypes = {
 			instantTextBoxType = {
 				name = "stockpile_label"
 				font = "cg_16b"
-				text = "SECTOR_STOCKPILE_LABEL"
+				text = "LOCAL_SECTOR_STOCKPILE"
 				position = { x = 70 y = 22 }
-				maxWidth = 100
+				maxWidth = 110
 				maxHeight = 20
 				fixedSize = yes
-				format = center
+				format = left
 				text_color_code = "E"
 			}
 
 			containerWindowType = {
 				name = "amount_bg_box_1"
-				size = { width = 100 height = 35 }
-				position = { x = 170 y = 13 }
+				size = { width = 90 height = 35 }
+				position = { x = 180 y = 13 }
 				clipping = no
 
 				background = {
 					name = "amount_bg_1"
 					spriteType = "GFX_tiles_dark_area_cut_8"
-					pdx_tooltip = "SECTOR_STOCKPILE_DESC"
+					pdx_tooltip = "LOCAL_SECTOR_STOCKPILE_DESC"
 				}
 			}
 
@@ -778,7 +904,7 @@ guiTypes = {
 				font = "cg_16b"
 				text = "XXXX"
 				position = { x = 170 y = 22 }
-				maxWidth = 100
+				maxWidth = 150
 				maxHeight = 20
 				fixedSize = yes
 				format = center
@@ -795,6 +921,13 @@ guiTypes = {
 			}
 		}
 
+		buttonType = {
+			name = "delete_sector"
+			quadTextureSprite = "GFX_button_sector_delete"
+			position = { x = 1183 y = 12 }
+			buttonFont = "cg_16b"
+		}
+		
 		buttonType = {
 			name = "create_vassal"
 			quadTextureSprite = "GFX_standard_button_200_34_button"

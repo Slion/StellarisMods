@@ -43,7 +43,7 @@ guiTypes = {
 		iconType = {
 			name = "hex_bg"
 			spriteType = "GFX_hex_bg"
-			position = { x = 29 y = -12 }
+			position = { x = 5 y = -12 }
 			alwaysTransparent = yes
 		}
 		
@@ -58,7 +58,7 @@ guiTypes = {
 			name = "factions_header"
 			font = "malgun_goth_24"
 			text = "topbar_button_factions_name"
-			position = { x = 64 y = 5 }
+			position = { x = 35 y = 5 }
 			maxWidth = 300
 			maxHeight = 20
 			fixedSize = yes
@@ -288,7 +288,7 @@ guiTypes = {
 		
 		containerWindowType = {
 			name = "list_background"
-			size = { width = 930 height = 545 }
+			size = { width = 933 height = 544 }
 			position = { x = 328 y = 85 }
 	       
 			background = {

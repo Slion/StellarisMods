@@ -22,6 +22,12 @@ guiTypes = {
 		position = { x= 7 y= 205 }#X decides how many weapon components needed for text to move. Will also move when "Select a Section" is visible
 		
 	}
+	
+	positionType = {
+		name = "min_component_slots"
+		position = { x = 3 y = 3 }#min slots for utilities and weapons
+	}
+
 	containerWindowType = {
 		name = "ship_designer"
 		size = { width = 1272 height = 678 }
@@ -59,7 +65,7 @@ guiTypes = {
 		iconType = {
 			name = "hex_bg"
 			spriteType = "GFX_hex_bg"
-			position = { x = 29 y = -12 }
+			position = { x = 5 y = -12 }
 			alwaysTransparent = yes
 		}
 
@@ -74,7 +80,7 @@ guiTypes = {
 			name = "design_name"
 			font = "malgun_goth_24"
 			text = "SHIPDESIGNER"
-			position = { x = 64 y = 5 }
+			position = { x = 35 y = 5 }
 			maxWidth = 400
 			maxHeight = 20
 			fixedsize = yes
@@ -193,7 +199,7 @@ guiTypes = {
 			containerWindowType = {
 				name = "background_box_02"
 				size = { width = 244 height = 195 }
-				position = { x = -81 y = 450 }
+				position = { x = -81 y = 442 }
 
 					background = {
 						name = "buttons_bg"
@@ -216,7 +222,7 @@ guiTypes = {
 				name = "ship_name_label"
 				font = "malgun_goth_24"
 				text = "SHIP_NAME_LABEL"
-				position = { x = -65 y = 420 }
+				position = { x = -65 y = 412 }
 				maxWidth = 270
 				maxHeight = 20
 				#text_color_code = "H"
@@ -503,7 +509,7 @@ guiTypes = {
 
 		containerWindowType = {
 			name = "controls"
-			position = { x=265 y=650 }
+			position = { x=265 y=642 }
 			size = { width=495 height=60 }
 			moveable = yes
 			Orientation = upper_left

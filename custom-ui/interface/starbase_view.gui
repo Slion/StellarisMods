@@ -173,7 +173,7 @@ guiTypes = {
 			name = "starbase_rename_button"
 			quadTextureSprite = "gfx_transparency_button"
 			position = { x = 5 y = 2 }
-			size = { x = 139 y = 30 }
+			size = { x = 278 y = 30 }
 		}
 
 		containerWindowType = {
@@ -226,6 +226,7 @@ guiTypes = {
 					text = "STARBASE_DETAILS_LABEL"
 					font = "cg_16b"
 					pdx_tooltip = "STARBASE_DETAILS"
+					shortcut = "K"
 				}
 
 				buttonType = {
@@ -236,6 +237,7 @@ guiTypes = {
 					buttonFont = "cg_16b"
 					text = "STARBASE_DISMANTLE_LABEL"
 					font = "cg_16b"
+					shortcut = "del"
 				}
 			}
 
@@ -295,6 +297,7 @@ guiTypes = {
 					text = "STARBASE_UPGRADE"
 					font = "cg_16b"
 					clicksound = "click_upgrade_starbase"
+					shortCut = "U"
 				}
 			}
 
@@ -339,6 +342,7 @@ guiTypes = {
 					buttonFont = "cg_16b"
 					text = "TRADE_ROUTES"
 					font = "cg_16b"
+					shortCut = "T"
 				}
 			}
 
@@ -462,6 +466,7 @@ guiTypes = {
 					position = { x= -73 y = 2 }
 					Orientation = "UPPER_RIGHT"
 					buttonFont = "cg_16b"
+					shortCut = "U"
 				}
 
 				buttonType = {
@@ -1175,7 +1180,7 @@ guiTypes = {
 		}
 
 		instantTextBoxType = {
-			name = "name"
+			name = "title"
 			font = "cg_16b"
 			text = ""
 			position = { x = 36 y = 3 }
@@ -1187,7 +1192,7 @@ guiTypes = {
 		}
 
 		instantTextBoxType = {
-			name = "right_text"
+			name = "time"
 			font = "cg_16b"
 			text = ""
 			position = { x = 146 y = 0 }
@@ -1205,7 +1210,7 @@ guiTypes = {
 		}
 
 		instantTextBoxType = {
-			name = "type"
+			name = "name"
 			font = "cg_16b"
 			text = ""
 			position = { x = 36 y = 18 }
@@ -1215,6 +1220,13 @@ guiTypes = {
 			format = left
 			alwaysTransparent = yes
 			text_color_code = "E"
+		}
+		buttonType = {
+			name = "cancel_button"
+			position = { x=-1 y=-1 }
+			size = { x = 250 y = 57 }
+			quadTextureSprite = "GFX_button_light"
+			clicksound = "back_click"
 		}
 
 		buttonType = {
