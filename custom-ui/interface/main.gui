@@ -1100,7 +1100,12 @@ guiTypes = {
 			# Always showing large version of the side bar			
 			position = { x = 1 y = 0 }					
 		}
-			
+
+		background = {
+			name = "moveable_background"
+			quadTextureSprite = "GFX_invisible"
+		}
+
 		containerWindowType = {
 			name = "background"
 			size = { width = 250 height = 640 }
@@ -1109,6 +1114,7 @@ guiTypes = {
 			background = {
 				name = "navbar_bg"
 				spriteType = "GFX_navbar_bg"
+				alwaysTransparent = yes
 			}
 		}
 
