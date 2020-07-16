@@ -7,6 +7,7 @@ Custom UI mods for Stellaris by Paradox
 Our Custom UI mod was developed with widescreen user experience in mind on a resolution of 3840 by 1600 pixels. It probably does not make sense for Full HD resolution and below. However the intention is to keep it working fine for any screen resolutions. Hopefully it brings some benefits to most widescreen users out there.
 
 ### Installation
+* For Stellaris v2.7 [subscribe here.](https://steamcommunity.com/sharedfiles/filedetails/?id=2167733476)
 * For Stellaris v2.2 [subscribe here.](https://steamcommunity.com/sharedfiles/filedetails/?id=1584866288)
 * For Stellaris v2.1 [subscribe here.](https://steamcommunity.com/sharedfiles/filedetails/?id=1574120097)
 
@@ -36,7 +37,7 @@ Make most views centered by default.
 I probably left out some views as this is still an early version needing more testing.
 Please feel free to report issues on GitHub.
 * Fleet View was left in the bottom left corner and is not moveable as hardcoded behavior is breaking it positioning.
-* 2.2 only: Left navigation bar not showing shortcuts until you move it.
+* > 2.2 only: Left navigation bar not showing shortcuts until you move it.
 * 2.1 only: Planet View side panels not automatically following main window.
 
 
