@@ -31,7 +31,7 @@ Make most views centered by default.
 
 ### Screenshoots
 
-![Outliner on the left](custom-ui/custom-ui.jpg "Outliner on the left")
+![Outliner on the left](custom-ui/thumbnail.png "Outliner on the left")
 
 ### Known issues
 I probably left out some views as this is still an early version needing more testing.
