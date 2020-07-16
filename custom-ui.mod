@@ -1,12 +1,12 @@
 name="Custom UI (2.7)"
-version="1.1"
+version="1.2"
 tags={
 	"Utilities"
 	"Graphics"
 	"Fixes"
 	"Overhaul"
 }
-picture="custom-ui.jpg"
+picture="thumbnail.png"
 supported_version="2.7.*"
 path="C:/Users/micro/Documents/Paradox Interactive/Stellaris/mod/custom-ui"
 remote_file_id="2167733476"
