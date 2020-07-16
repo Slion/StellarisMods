@@ -37,7 +37,7 @@ Make most views centered by default.
 I probably left out some views as this is still an early version needing more testing.
 Please feel free to report issues on GitHub.
 * Fleet View was left in the bottom left corner and is not moveable as hardcoded behavior is breaking it positioning.
-* > 2.2 only: Left navigation bar not showing shortcuts until you move it.
+* 2.2 and above: Left navigation bar not showing shortcuts until you move it.
 * 2.1 only: Planet View side panels not automatically following main window.
 
 
