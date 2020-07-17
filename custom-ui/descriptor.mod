@@ -1,5 +1,5 @@
 name="Custom UI (2.7)"
-version="1.2"
+version="2.7.2.3"
 tags={
 	"Utilities"
 	"Graphics"

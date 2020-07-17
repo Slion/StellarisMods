@@ -4,7 +4,6 @@
 guiTypes = {
 	containerWindowType = {
 		name = "policies_view"
-		size = { width = 595 height = 640 } 
 		orientation = upper_left
 		moveable = yes
 		clipping = no
@@ -13,12 +12,14 @@ guiTypes = {
 		# Default mode
 		if_resolution = {
 			max_width = 3439
+			size = { width = 595 height = 640 } 
 			position = { x = 35 y = 40 }
 		}
 
 		# Widescreen mode
 		if_resolution = {
 			min_width = 3440
+			size = { width = 595 height = 1200 } 
 			position = { x = @widescreen_x y = @widescreen_y }
 		}
 
@@ -109,8 +110,20 @@ guiTypes = {
         
 		containerWindowType = {
 			name = "policy_list_window"
-			position = { x = 6 y = 55 }
-			size = { width = 583 height = 579 }
+			position = { x = 6 y = 55 }					
+
+			# Default mode
+			if_resolution = {
+				max_width = 3439
+				size = { width = 583 height = 579 }
+			}
+
+			# Widescreen mode
+			if_resolution = {
+				min_width = 3440
+				size = { width = 583 height = 1139 } # 1200-61
+			}
+
 			moveable = no
         
 			background = {
@@ -121,8 +134,20 @@ guiTypes = {
 			smoothListboxType = {
 				name = "policy_list"
 				position = { x = 10 y = 10 }
-				backGround=""
-				size = { x = 550 y=557 }
+				backGround=""				
+				
+				# Default mode
+				if_resolution = {
+					max_width = 3439
+					size = { x = 550 y=557 }
+				}
+
+				# Widescreen mode
+				if_resolution = {
+					min_width = 3440
+					size = { x = 550 y=1117 } # 1200-61-22
+				}
+
 				spacing = 1
 				scrollbartype = "standardlistbox_slider"
 				borderSize = { x = 0 y = 0 }
