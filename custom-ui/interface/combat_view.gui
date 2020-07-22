@@ -5,7 +5,7 @@
 @combat_stat_w = 64
 @combat_stat_h = 64
 
-@widescreen_x = 516
+@widescreen_x = 700
 
 guiTypes = {
 

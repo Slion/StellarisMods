@@ -5,7 +5,7 @@
 @side_view_panel_width = 334
 @side_view_entry_width = 304
 
-@widescreen_x = 516
+@widescreen_x = 700
 @widescreen_y = 104
 
 

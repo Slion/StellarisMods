@@ -12,7 +12,7 @@ guiTypes = {
 
 	containerWindowType = {
 		
-		@offset_x = 516
+		@offset_x = 700
 		@offset_y = 108
 		@offset_y_plus_39 = 147
 		@offset_y_minus_4 = 104

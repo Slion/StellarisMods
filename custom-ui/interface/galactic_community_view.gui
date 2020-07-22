@@ -1,3 +1,6 @@
+@widescreen_x = 700
+@widescreen_y = 104
+
 guiTypes = {
 	# Dynamic positions and sizes for the members and council containers
 	positionType = {
@@ -61,10 +64,22 @@ guiTypes = {
 
 	containerWindowType = {
 		name = "galactic_community_view"
-		position = { x = 35 y = 40 }
 		size = { width= 1272 height= 600 }
 		moveable = yes
 		clipping = no
+
+		# Default mode
+		if_resolution = {
+			max_width = 3439
+			position = { x = 35 y = 40 }
+		}
+
+		# Widescreen mode
+		if_resolution = {
+			min_width = 3440						
+			position = { x = @widescreen_x y = @widescreen_y }			
+		}
+
 
 		background = {
 			name = "galactic_community_view_background"

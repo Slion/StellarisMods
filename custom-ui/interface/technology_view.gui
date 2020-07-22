@@ -1,4 +1,4 @@
-@widescreen_x_minus_5 = 511
+@widescreen_x_minus_5 = 695
 @widescreen_y_minus_5 = 99
 
 guiTypes = {

@@ -1,3 +1,8 @@
+
+@widescreen_x = 437
+@widescreen_y = 95
+
+
 guiTypes = {
 	containerWindowType = {
 		name = "outliner_toggle_window"
@@ -83,7 +88,7 @@ guiTypes = {
 		# Widescreen mode
 		if_resolution = {
 			min_width = 3440						
-			position = { x = 253 y = 95 }
+			position = { x = @widescreen_x y = @widescreen_y }
 			orientation = upper_left
 		}
 		
